@@ -1,0 +1,14 @@
+:root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.65; color: #1d3330; background: #fbfdfc; }
+* { box-sizing: border-box; }
+body { max-width: 760px; padding: 0 24px; margin: auto; }
+header, footer { padding: 22px 0; border-bottom: 1px solid #d6e5df; }
+.brand { font-weight: 700; text-decoration: none; }
+main { padding: 54px 0; min-height: 55vh; }
+h1 { font-size: clamp(32px, 6vw, 46px); line-height: 1.15; letter-spacing: -.035em; margin: 12px 0 24px; }
+p { max-width: 65ch; }
+a { color: #176b51; text-underline-offset: 3px; }
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: #176b51; }
+.muted, .notice { color: #586a64; font-size: 14px; }
+.notice { border-left: 3px solid #b49b64; padding-left: 12px; }
+footer { border-bottom: 0; border-top: 1px solid #d6e5df; display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
+@media (prefers-color-scheme: dark) { :root { background: #101e20; color: #e9f3ef; } a, .eyebrow { color: #8ee1bd; } .muted, .notice { color: #b9d1c9; } header, footer { border-color: #304b49; } }
