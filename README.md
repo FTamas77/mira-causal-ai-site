@@ -1,3 +1,5 @@
 # mira Causal AI website
 
-Minimal public static website and support repository. Enable GitHub Pages from `main` and `/ (root)`. Report non-sensitive issues here; contact support by email for private matters. The main engine repository and private MCP configuration are not included. Privacy and terms are drafts pending publisher review.
+Minimal static website for a research project investigating LLM-assisted causal discovery and model-based decision-making. This repository contains only the information site, not the causal engine or private MCP configuration.
+
+The application is not currently offered for public use. The privacy and research-use notices describe the research stage and are not final public-release policies. Non-sensitive scientific feedback is welcome in public GitHub Issues.
