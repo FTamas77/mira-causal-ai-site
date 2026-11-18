@@ -1,6 +1,6 @@
 # mira Causal AI — research website
 
-The public, static research information site for **mira Causal AI**, an independent project led by **Dr. Tamas Fekete**.
+The public, static research information site for **mira Causal AI**, a research initiative featuring scientific and engineering work by **Dr. Tamas Fekete**.
 
 Published at: https://ftamas77.github.io/mira-causal-ai-site/
 
