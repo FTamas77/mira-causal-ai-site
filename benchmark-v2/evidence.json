@@ -1,0 +1,372 @@
+{
+  "schema_version": "2.0",
+  "case_study": "Pre-release blind synthetic cooling time-series comparison",
+  "date": "2026-11-19",
+  "status": "reported_mira_execution_and_independent_ground_truth_grading",
+  "provenance": "Two user-shared ChatGPT session reports. No independent backend rerun. Synthetic ground truth held out until both executions were submitted; CSV independently checksum verified.",
+  "dataset": {
+    "file": "mira_blind_cooling_v2_900.csv",
+    "sha256": "22eac3fc04f0577df3af126d5537c628018213e1dcfd35cef5f304b2aeb5d13a",
+    "observations": 900,
+    "variables": [
+      "ambient_temp_C",
+      "production_load_pct",
+      "coolant_flow_lpm",
+      "machine_temp_C",
+      "energy_kwh",
+      "vibration_mm_s"
+    ],
+    "interval_minutes": 15,
+    "seed": 20261119,
+    "burn_in": 250
+  },
+  "mira": {
+    "connection": "private-hosted",
+    "version": "0.4.0",
+    "operation": "discover_causal_graph",
+    "status": "completed",
+    "algorithm": "pcmci-plus-parcorr-v1",
+    "tigramite": "5.2.10.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "tau_min": 0,
+    "tau_max": 2,
+    "alpha": 0.05,
+    "background_knowledge": [],
+    "fdr_method": "none",
+    "reported_test_calls": 260,
+    "links_contemporaneous": 2,
+    "links_lagged": 16,
+    "unresolved_orientations": 0,
+    "issues": [],
+    "request_sha256": "5cee9f3d91c4eefcce08578d992868bda1ee50710158e26b5318337fe932ca91",
+    "data_sha256": "9d1ef511ec675baa91b5814fbce1ee2420c1ad757494537e4013371d7ebbf00b",
+    "links": [
+      {
+        "source": "machine_temp_C",
+        "target": "vibration_mm_s",
+        "lag": 0,
+        "mark": "-->",
+        "orientation_basis": "pcmci_plus",
+        "existence_basis": "statistical_test",
+        "p_value": "0.01921",
+        "partial_correlation": -0.0785,
+        "matches_synthetic_ground_truth": false
+      },
+      {
+        "source": "production_load_pct",
+        "target": "coolant_flow_lpm",
+        "lag": 0,
+        "mark": "-->",
+        "orientation_basis": "pcmci_plus",
+        "existence_basis": "statistical_test",
+        "p_value": "0.04006",
+        "partial_correlation": -0.0688,
+        "matches_synthetic_ground_truth": false
+      },
+      {
+        "source": "ambient_temp_C",
+        "target": "ambient_temp_C",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "1.38e-69",
+        "partial_correlation": 0.5424,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "ambient_temp_C",
+        "target": "machine_temp_C",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "1.06e-13",
+        "partial_correlation": 0.2454,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "coolant_flow_lpm",
+        "target": "coolant_flow_lpm",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "9.87e-37",
+        "partial_correlation": 0.4069,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "coolant_flow_lpm",
+        "target": "energy_kwh",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "9.53e-15",
+        "partial_correlation": 0.2557,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "coolant_flow_lpm",
+        "target": "machine_temp_C",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "7.10e-49",
+        "partial_correlation": -0.4647,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "energy_kwh",
+        "target": "energy_kwh",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "5.25e-31",
+        "partial_correlation": 0.3743,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "machine_temp_C",
+        "target": "coolant_flow_lpm",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "1.22e-94",
+        "partial_correlation": 0.6177,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "machine_temp_C",
+        "target": "machine_temp_C",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "1.27e-22",
+        "partial_correlation": 0.32,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "machine_temp_C",
+        "target": "vibration_mm_s",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "8.39e-71",
+        "partial_correlation": 0.5479,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "production_load_pct",
+        "target": "coolant_flow_lpm",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "1.01e-217",
+        "partial_correlation": 0.8201,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "production_load_pct",
+        "target": "energy_kwh",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "2.78e-54",
+        "partial_correlation": 0.4867,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "production_load_pct",
+        "target": "machine_temp_C",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "1.42e-121",
+        "partial_correlation": 0.6795,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "production_load_pct",
+        "target": "production_load_pct",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "8.35e-51",
+        "partial_correlation": 0.472,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "production_load_pct",
+        "target": "vibration_mm_s",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "4.04e-33",
+        "partial_correlation": 0.3863,
+        "matches_synthetic_ground_truth": true
+      },
+      {
+        "source": "vibration_mm_s",
+        "target": "coolant_flow_lpm",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "0.004863",
+        "partial_correlation": -0.0944,
+        "matches_synthetic_ground_truth": false
+      },
+      {
+        "source": "vibration_mm_s",
+        "target": "vibration_mm_s",
+        "lag": 1,
+        "mark": "-->",
+        "orientation_basis": "time_order",
+        "existence_basis": "statistical_test",
+        "p_value": "1.59e-29",
+        "partial_correlation": 0.3654,
+        "matches_synthetic_ground_truth": true
+      }
+    ]
+  },
+  "baseline": {
+    "status": "PCMCI+ NOT EXECUTED",
+    "reason": "Tigramite ModuleNotFoundError in Python 3.13.5; no extra packages installed",
+    "tools": {
+      "python": "3.13.5",
+      "pandas": "2.2.3",
+      "numpy": "2.3.5"
+    },
+    "real_computation": "Pearson cross-correlations and dataset validation",
+    "pearson_flow_to_temperature": {
+      "lag_0": 0.056251376885634266,
+      "lag_1": -0.6749655270214012,
+      "lag_2": -0.7854228225446621
+    },
+    "note": "Same-time r almost zero; lag 2 raw correlation largest in magnitude, although true direct link is at lag 1."
+  },
+  "ground_truth": {
+    "source": "held-out seeded synthetic generating equations, disclosed after reporting",
+    "planted_lag0": [],
+    "planted_lag2": [],
+    "planted_lag1": [
+      {
+        "source": "ambient_temp_C",
+        "target": "ambient_temp_C",
+        "lag": 1
+      },
+      {
+        "source": "production_load_pct",
+        "target": "production_load_pct",
+        "lag": 1
+      },
+      {
+        "source": "coolant_flow_lpm",
+        "target": "coolant_flow_lpm",
+        "lag": 1
+      },
+      {
+        "source": "machine_temp_C",
+        "target": "machine_temp_C",
+        "lag": 1
+      },
+      {
+        "source": "energy_kwh",
+        "target": "energy_kwh",
+        "lag": 1
+      },
+      {
+        "source": "vibration_mm_s",
+        "target": "vibration_mm_s",
+        "lag": 1
+      },
+      {
+        "source": "production_load_pct",
+        "target": "coolant_flow_lpm",
+        "lag": 1
+      },
+      {
+        "source": "machine_temp_C",
+        "target": "coolant_flow_lpm",
+        "lag": 1
+      },
+      {
+        "source": "production_load_pct",
+        "target": "machine_temp_C",
+        "lag": 1
+      },
+      {
+        "source": "coolant_flow_lpm",
+        "target": "machine_temp_C",
+        "lag": 1
+      },
+      {
+        "source": "ambient_temp_C",
+        "target": "machine_temp_C",
+        "lag": 1
+      },
+      {
+        "source": "production_load_pct",
+        "target": "energy_kwh",
+        "lag": 1
+      },
+      {
+        "source": "coolant_flow_lpm",
+        "target": "energy_kwh",
+        "lag": 1
+      },
+      {
+        "source": "machine_temp_C",
+        "target": "vibration_mm_s",
+        "lag": 1
+      },
+      {
+        "source": "production_load_pct",
+        "target": "vibration_mm_s",
+        "lag": 1
+      }
+    ],
+    "metrics": {
+      "tp": 15,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.8333333333333334,
+      "recall": 1,
+      "f1": 0.9090909090909091,
+      "cross_variable_tp": 9,
+      "cross_variable_fp": 3,
+      "cross_variable_fn": 0,
+      "cross_variable_precision": 0.75,
+      "cross_variable_recall": 1,
+      "cross_variable_f1": 0.8571428571428571
+    }
+  },
+  "scm": {
+    "provided": false,
+    "estimated": false,
+    "intervention_effect_identified": false,
+    "flow_optimization_supported": false,
+    "correctly_refused_in_both": true
+  },
+  "caveats": [
+    "This is one synthetic dataset and one reported run per configuration; it is not a general performance estimate.",
+    "The comparison does not show that ChatGPT is intrinsically unable to do PCMCI+ in a Python environment with Tigramite installed.",
+    "Two contemporaneous extra links and one extra lag-1 link are false positives relative to the known DGP.",
+    "No multiple-testing correction was applied; lagged confounding and finite-sample errors remain possible.",
+    "Neither run estimated a causal effect or an optimal intervention.",
+    "mira was a private connector pending public app review; reported tool outputs not independently replayed."
+  ]
+}

@@ -8,7 +8,9 @@ Published at: https://ftamas77.github.io/mira-causal-ai-site/
 
 - `index.html` — research overview, architecture, capabilities and researcher profile.
 - `demo.html` — self-contained synthetic reference demonstration; does not expose private chats or backend credentials.
-- `benchmark.html` — one-run, pre-release ChatGPT-only vs private mira comparison with reported backend evidence.
+- `benchmark.html` — **current blind benchmark v2** on 900 synthetic observations; scored truthfully as 15 TP, 3 FP, 0 FN (83.3% precision / 100% recall / 90.9% F1), with explicit scientific limitations.
+- `benchmark-v1.html` — archived non-blind, 600-row pre-release experiment with a supplied SCM; still accessible but no longer the headline case study.
+- `benchmark-v2/` — exact original prompts, verified CSV, reproducible Python generator, evidence JSON and transparent scoring methodology.
 - `benchmark-cooling/mira_synthetic_cooling_600.csv` — the exact original 600-row synthetic dataset, byte-verified with the generator.
 - `support.html` — research contact and public issue tracker.
 - `privacy.html` — research-stage privacy notice.
@@ -34,4 +36,4 @@ The homepage no longer depends on public ChatGPT share links. Existing informati
 - `benchmark-cooling/evidence.json`: the manually transcribed structured results from the user-shared conversation reports, including all 11 links, p-values, partial correlations, request hashes and SCM scenarios.
 - `benchmark-cooling/README.md`: explicit data-generating process, evaluation protocol, scientific limits and release retest plan.
 
-The benchmark reported 11/11 synthetic ground-truth edge matches on one specific seeded dataset. It compares *tool availability in tested ChatGPT environments*, not general LLM capability, real-world causal identification or a publicly approved ChatGPT app. The reports came from a private-hosted mira v0.4.0 connector. No server, credential, ChatGPT session dump or live endpoint is published.
+The **archived v1** benchmark reported 11/11 planted links on one seeded dataset. The **current blind v2** found 15/15 planted links with 3 extra links on a new 900-row dataset, yielding precision 83.3%, recall 100% and F1 90.9%; cross-variable-only precision is 75%. Both evaluate specialized tool availability in two particular ChatGPT configurations, not general LLM capability, real-world causal validity, SCM effect estimation or a publicly approved app. Reports came from user-shared private-hosted mira v0.4.0 and ChatGPT-only sessions, not independent raw backend reruns. No server credentials, ChatGPT session dump or live endpoint is published.

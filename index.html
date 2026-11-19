@@ -39,7 +39,7 @@
       <p class="hero-lead">Connect conversational AI with scientific causal discovery and transparent, model-based decisions. An experimental approach designed to keep the evidence, assumptions and calculations visible.</p>
       <div class="button-row"><a class="btn btn-primary" href="demo.html">Explore the research demo <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="#research">How it works <span aria-hidden="true">↓</span></a></div>
       <div class="hero-meta"><span class="status-dot" aria-hidden="true"></span> Research prototype <span class="meta-separator">·</span> ChatGPT app submitted for review</div>
-      <p class="hero-benchmark-link"><a href="benchmark.html">New research evidence: ChatGPT vs. ChatGPT + mira <span aria-hidden="true">↗</span></a></p>
+      <p class="hero-benchmark-link"><a href="benchmark.html">New blind-test evidence: ChatGPT vs. ChatGPT + mira <span aria-hidden="true">↗</span></a></p>
     </div>
     <figure class="system-card">
       <div class="system-card-heading"><span>RESEARCH ARCHITECTURE</span><span class="system-online"><span class="status-dot" aria-hidden="true"></span> TWO COMPLEMENTARY LAYERS</span></div>
@@ -68,19 +68,19 @@
 <section class="section-block home-benchmark" id="comparison">
   <div class="container split-layout align-start">
     <div>
-      <p class="eyebrow">NEW / PRE-RELEASE BENCHMARK · NOVEMBER 2026</p>
+      <p class="eyebrow">NEW / BLIND BENCHMARK V2 · NOVEMBER 2026</p>
       <h2>What does mira add <br>to <span class="accent">ChatGPT?</span></h2>
-      <p class="section-lead">The same synthetic cooling data. The same intervention question. Two ChatGPT conversations, one with a private mira connector and one without.</p>
-      <p class="body-muted">In the reported mira run, PCMCI+ recovered all 11 planted lag-1 links in 600 observations. The ChatGPT-only test could not execute Tigramite in its sandbox. Both correctly solved the separately supplied SCM decision.</p>
-      <div class="button-row"><a class="btn btn-primary" href="benchmark.html">See the evidence-led comparison <span aria-hidden="true">↗</span></a></div>
-      <p class="small-note">Single seeded synthetic dataset, one run per configuration. Not a general performance claim or an endorsement of an unreleased ChatGPT app.</p>
+      <p class="section-lead">We ran the same previously unseen 900-row industrial cooling dataset through two ChatGPT conversations, with and without a private mira connector.</p>
+      <p class="body-muted">ChatGPT-only identified informative lagged Pearson correlations but could not execute PCMCI+ in its test environment. mira returned a formal temporal link graph; independently graded against the held-out synthetic generator, it recovered all 15 planted links, with 3 extra links.</p>
+      <div class="button-row"><a class="btn btn-primary" href="benchmark.html">Explore blind benchmark v2 <span aria-hidden="true">↗</span></a></div>
+      <p class="small-note">One synthetic dataset and one reported run per configuration. Neither run estimated causal intervention effects. Results reflect available tools in these environments, not universal product superiority.</p>
     </div>
-    <div class="home-benchmark-card" aria-label="Summary of the pre-release cooling benchmark">
-      <div class="panel-header"><span>CONTROLLED SYNTHETIC TEST</span><span class="panel-chip">PRIVATE CONNECTOR v0.4.0</span></div>
-      <div class="home-benchmark-score"><strong>11<span>/11</span></strong><p>Planted lagged relationships matched by the reported PCMCI+ graph.</p></div>
-      <div class="home-benchmark-breakdown"><span>6/6 cross-variable links</span><span>5/5 self-links</span></div>
-      <div class="home-benchmark-rows"><div><span>With mira</span><strong>PCMCI+ completed</strong></div><div><span>ChatGPT-only</span><strong>PCMCI+ unavailable in test sandbox</strong></div><div><span>Explicit SCM</span><strong>Same correct decision in both</strong></div></div>
-      <p class="panel-footnote">From user-shared execution reports. The complete link list, prompts, and reproducible data generator are available on the benchmark page.</p>
+    <div class="home-benchmark-card" aria-label="Results from the blind synthetic cooling benchmark">
+      <div class="panel-header"><span>BLIND SYNTHETIC EVALUATION · 900 ROWS</span><span class="panel-chip">PRIVATE MIRA v0.4.0</span></div>
+      <div class="home-benchmark-score"><strong>15<span>/15</span></strong><p>Planted temporal links recovered in the reported PCMCI+ graph, with <strong>3 extra links</strong> counted as false positives.</p></div>
+      <div class="home-benchmark-breakdown"><span>83.3% precision</span><span>100% recall</span><span>90.9% F1</span></div>
+      <div class="home-benchmark-rows"><div><span>With mira</span><strong>PCMCI+ completed; 15 TP, 3 FP</strong></div><div><span>ChatGPT-only</span><strong>Lagged correlations; PCMCI+ unavailable</strong></div><div><span>Cross-variable</span><strong>9/9 recovered, 3 additional links</strong></div></div>
+      <p class="panel-footnote">Reported tool outputs, exact prompts, 900-row source CSV and hidden generating graph (now disclosed) are available with the benchmark.</p>
     </div>
   </div>
 </section>
