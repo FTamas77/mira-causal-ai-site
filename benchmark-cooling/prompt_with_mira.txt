@@ -1,0 +1,53 @@
+Act as an industrial causal AI research analyst.
+
+Use the connected mira Causal AI app for all causal discovery and SCM decision computations. Call the actual backend tools and report their real outputs. Do not simulate or fabricate tool results.
+
+Analyze the attached synthetic industrial cooling dataset, containing 600 equally spaced observations at 15-minute intervals.
+
+Variables:
+- ambient_temp_C
+- production_load_pct
+- coolant_flow_lpm
+- machine_temp_C
+- energy_kwh
+
+Use all 600 rows in their original order. The timestamp is metadata.
+
+Part A — Causal discovery
+1. Call mira get_capabilities.
+2. Run mira discover_causal_graph using PCMCI+ and analytic ParCorr.
+3. Parameters: maximum lag 2, minimum lag 0, alpha 0.05, no background knowledge.
+4. Report the actual causal graph, contemporaneous and lagged links, orientations, p-values and partial correlations.
+5. Visualize the discovered graph.
+Clearly distinguish statistical relationships from established causal effects.
+
+Part B — SCM intervention
+Use the following explicitly supplied hypothetical SCM. These coefficients are assumptions, not estimated from causal discovery.
+
+At the reference operating point, with all other conditions fixed and exogenous innovations set to zero:
+machine_temp_C(t) = 55 - 0.38 * (coolant_flow_lpm(t-1) - 100)
+energy_kwh(t)    = 40 + 0.22 * (coolant_flow_lpm(t-1) - 100)
+
+Compare:
+- Scenario A: do(coolant_flow_lpm = 100)
+- Scenario B: do(coolant_flow_lpm = 110), representing a 10% increase.
+
+Use mira evaluate_decision with a complete explicit SCM. The intervention target must be an endogenous variable. Use supported typed expressions and label all supplied coefficients as assumptions.
+
+Objective: Minimize energy consumption.
+Hard constraint: Machine temperature must be <= 53 C.
+
+Calculate both scenarios using the actual mira backend. Show their outcomes, feasibility, recommendation and computation traces.
+
+Part C — Dashboard and interpretation
+Create a visually impressive, compact research dashboard showing:
+1. Historical time-series data.
+2. Actual PCMCI+ causal graph.
+3. Comparison of both SCM scenarios.
+4. Temperature constraint and recommended intervention.
+5. Backend computation trace and evidence provenance.
+
+Clearly distinguish synthetic observations, supplied SCM assumptions and actual backend computations.
+Do not claim that the SCM was automatically estimated, that causal effects were identified from observations, or that this is an individualized historical counterfactual.
+If any mira call fails, report the failure rather than inventing results.
+Finish with a concise scientific conclusion describing what was actually computed.
