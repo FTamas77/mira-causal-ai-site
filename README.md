@@ -9,6 +9,7 @@ Published at: https://ftamas77.github.io/mira-causal-ai-site/
 - `index.html` — research overview, architecture, capabilities and researcher profile.
 - `demo.html` — self-contained synthetic reference demonstration; does not expose private chats or backend credentials.
 - `benchmark.html` — one-run, pre-release ChatGPT-only vs private mira comparison with reported backend evidence.
+- `benchmark-cooling/mira_synthetic_cooling_600.csv` — the exact original 600-row synthetic dataset, byte-verified with the generator.
 - `support.html` — research contact and public issue tracker.
 - `privacy.html` — research-stage privacy notice.
 - `terms.html` — experimental research-use notice.

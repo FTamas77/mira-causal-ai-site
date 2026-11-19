@@ -86,3 +86,8 @@
 .bench-conclusion strong{color:#a3efd5}
 @media(max-width:900px){.bench-hero-inner{grid-template-columns:1fr}.hero-proof{max-width:590px}.bench-heading{display:block}.bench-heading p:last-child{margin-top:18px}.bench-accuracy{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:690px){.bench-grid,.bench-scenario,.bench-evidence-grid{grid-template-columns:1fr}.bench-hero{padding:55px 0}.bench-block{padding:60px 0}.bench-panel{padding:21px}.bench-matrix-wrap{padding:12px}.bench-accuracy>div{padding:11px}}
+
+/* Recovery categories and accessible result table. */
+.link-breakdown{display:flex;flex-wrap:wrap;gap:7px;margin:-4px 0 17px}
+.link-breakdown span{font-size:11px;color:#ccede4;border:1px solid #487d74;border-radius:20px;background:#123d37;padding:5px 9px}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}

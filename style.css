@@ -254,3 +254,22 @@ h1 em,.accent { color: var(--teal); font-style: normal; }
   .btn,.primary-nav a { transition: none; }
   .btn:hover { transform: none; }
 }
+
+/* Homepage benchmark spotlight; consistent with the existing research site. */
+.home-benchmark{background:radial-gradient(ellipse at 75% 32%,rgba(23,99,92,.20),transparent 56%),#0b1c25}
+.home-benchmark .section-lead{margin:24px 0 16px}
+.home-benchmark .body-muted{color:var(--muted);font-size:14px;line-height:1.8}
+.home-benchmark-card{padding:26px;border:1px solid #4b8d83;border-radius:17px;background:linear-gradient(160deg,#173e41,#0e2832);box-shadow:0 22px 65px rgba(0,0,0,.15)}
+.home-benchmark-score{padding:25px 0 18px;border-bottom:1px solid #346068}
+.home-benchmark-score strong{font-size:clamp(58px,8vw,88px);letter-spacing:-.075em;line-height:1;color:var(--teal)}
+.home-benchmark-score strong span{font-size:27px;color:#ddedea;letter-spacing:-.025em}
+.home-benchmark-score p{margin:13px 0 0;max-width:350px;color:#c0d8d9;font-size:14px;line-height:1.65}
+.home-benchmark-breakdown{display:flex;flex-wrap:wrap;gap:9px;padding:15px 0;border-bottom:1px solid #346068}
+.home-benchmark-breakdown span{color:#b7e7dc;background:#113a38;border:1px solid #437871;border-radius:20px;font-size:11px;padding:5px 9px}
+.home-benchmark-rows{padding:8px 0 19px}
+.home-benchmark-rows div{display:flex;align-items:start;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(165,215,214,.12);font-size:12px}
+.home-benchmark-rows span{color:#91b5bb;flex:0 0 95px}
+.home-benchmark-rows strong{text-align:right;color:#e0f0ec;font-weight:700}
+.hero-benchmark-link{margin:12px 0 0;font-size:12px}
+.hero-benchmark-link a{color:var(--teal);font-weight:700}
+@media(max-width:720px){.home-benchmark-card{padding:19px}.home-benchmark-rows div{gap:9px}}

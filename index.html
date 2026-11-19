@@ -3,9 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="mira Causal AI combines ChatGPT-assisted research workflows with independent PCMCI+ discovery and auditable structural causal model decisions. Research project by Dr. Tamas Fekete.">
+  <meta name="description" content="mira Causal AI connects ChatGPT research with independent PCMCI+ discovery, explicit SCM decisions and a reproducible pre-release benchmark.">
   <meta name="theme-color" content="#08131c">
   <title>Research-driven causal intelligence | mira Causal AI</title>
+  <link rel="canonical" href="https://ftamas77.github.io/mira-causal-ai-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="mira Causal AI">
+  <meta property="og:title" content="Research-driven causal intelligence | mira Causal AI">
+  <meta property="og:description" content="mira Causal AI connects ChatGPT research with independent PCMCI+ discovery, explicit SCM decisions and a reproducible pre-release benchmark.">
+  <meta property="og:url" content="https://ftamas77.github.io/mira-causal-ai-site/">
+  <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="homepage">
@@ -32,6 +39,7 @@
       <p class="hero-lead">Connect conversational AI with scientific causal discovery and transparent, model-based decisions. An experimental approach designed to keep the evidence, assumptions and calculations visible.</p>
       <div class="button-row"><a class="btn btn-primary" href="demo.html">Explore the research demo <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="#research">How it works <span aria-hidden="true">↓</span></a></div>
       <div class="hero-meta"><span class="status-dot" aria-hidden="true"></span> Research prototype <span class="meta-separator">·</span> ChatGPT app submitted for review</div>
+      <p class="hero-benchmark-link"><a href="benchmark.html">New research evidence: ChatGPT vs. ChatGPT + mira <span aria-hidden="true">↗</span></a></p>
     </div>
     <figure class="system-card">
       <div class="system-card-heading"><span>RESEARCH ARCHITECTURE</span><span class="system-online"><span class="status-dot" aria-hidden="true"></span> TWO COMPLEMENTARY LAYERS</span></div>
@@ -57,6 +65,25 @@
     <div><strong>Research-stage</strong><span>Transparent limitations</span></div>
   </div>
 </div>
+<section class="section-block home-benchmark" id="comparison">
+  <div class="container split-layout align-start">
+    <div>
+      <p class="eyebrow">NEW / PRE-RELEASE BENCHMARK · NOVEMBER 2026</p>
+      <h2>What does mira add <br>to <span class="accent">ChatGPT?</span></h2>
+      <p class="section-lead">The same synthetic cooling data. The same intervention question. Two ChatGPT conversations, one with a private mira connector and one without.</p>
+      <p class="body-muted">In the reported mira run, PCMCI+ recovered all 11 planted lag-1 links in 600 observations. The ChatGPT-only test could not execute Tigramite in its sandbox. Both correctly solved the separately supplied SCM decision.</p>
+      <div class="button-row"><a class="btn btn-primary" href="benchmark.html">See the evidence-led comparison <span aria-hidden="true">↗</span></a></div>
+      <p class="small-note">Single seeded synthetic dataset, one run per configuration. Not a general performance claim or an endorsement of an unreleased ChatGPT app.</p>
+    </div>
+    <div class="home-benchmark-card" aria-label="Summary of the pre-release cooling benchmark">
+      <div class="panel-header"><span>CONTROLLED SYNTHETIC TEST</span><span class="panel-chip">PRIVATE CONNECTOR v0.4.0</span></div>
+      <div class="home-benchmark-score"><strong>11<span>/11</span></strong><p>Planted lagged relationships matched by the reported PCMCI+ graph.</p></div>
+      <div class="home-benchmark-breakdown"><span>6/6 cross-variable links</span><span>5/5 self-links</span></div>
+      <div class="home-benchmark-rows"><div><span>With mira</span><strong>PCMCI+ completed</strong></div><div><span>ChatGPT-only</span><strong>PCMCI+ unavailable in test sandbox</strong></div><div><span>Explicit SCM</span><strong>Same correct decision in both</strong></div></div>
+      <p class="panel-footnote">From user-shared execution reports. The complete link list, prompts, and reproducible data generator are available on the benchmark page.</p>
+    </div>
+  </div>
+</section>
 <section class="section-block" id="research">
   <div class="container">
     <div class="section-heading"><div><p class="eyebrow">01 / THE APPROACH</p><h2>Reasoning is not the same<br>as <span class="accent">computation.</span></h2></div><p class="section-aside">A language model can frame an analytical question. A separate scientific engine should perform and document the actual calculation.</p></div>
