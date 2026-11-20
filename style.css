@@ -307,3 +307,45 @@ h1 em,.accent { color: var(--teal); font-style: normal; }
 @media (max-width:1050px) { .capability-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
 @media (max-width:720px) { .capability-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .capability-step { padding:20px; } }
 @media (max-width:490px) { .capability-grid { grid-template-columns:1fr; } .capability-step h3 { margin-top:11px; } }
+
+
+/* Example usage: real-output cooling case, rendered as original SVG visual summaries. */
+.case-hero { padding:90px 0 96px; background:radial-gradient(ellipse at 80% 30%,rgba(37,127,113,.16),transparent 55%),var(--bg); }
+.case-intro { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.03fr); align-items:center; gap:clamp(34px,5vw,70px); }
+.case-intro h1 { font-size:clamp(42px,4.5vw,68px); margin:0 0 26px; }
+.case-intro .page-lead { margin:0 0 26px; }
+.case-metrics { display:flex; flex-wrap:wrap; gap:13px; margin:0 0 28px; }
+.case-metrics span { display:flex; align-items:baseline; gap:7px; background:#122d38; padding:9px 12px; border:1px solid #2b5256; border-radius:10px; color:var(--muted); font-size:12px; }
+.case-metrics b { font-size:22px; color:var(--teal); }
+.case-lead-art,.case-visual,.case-trace { margin:0; min-width:0; }
+.case-lead-art img,.case-visual img,.case-trace img { width:100%; height:auto; display:block; border:1px solid #366266; border-radius:15px; box-shadow:0 18px 50px rgba(0,0,0,.22); background:#fff; }
+.case-lead-art figcaption,.case-visual figcaption,.case-trace figcaption { margin:10px 0 0; font-size:12px; color:var(--muted-2); }
+.case-section { padding:92px 0; }
+.case-feature { background:#091b23; }
+.case-visual-pair { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(230px,.65fr); gap:36px; align-items:center; }
+.case-explanation { padding:16px 0 16px 18px; }
+.case-step { color:var(--teal); font-size:12px; font-weight:800; letter-spacing:.15em; }
+.case-explanation h3 { font-size:clamp(24px,2.7vw,34px); margin:18px 0 13px; }
+.case-explanation p,.case-result p { font-size:15px; line-height:1.8; color:var(--muted); }
+.case-divider { display:block; height:1px; background:var(--line); margin:26px 0; }
+.case-result { border:1px solid #47776e; background:linear-gradient(155deg,#173c40,#0d2631); border-radius:17px; padding:28px; }
+.case-result>strong { display:block; font-size:clamp(55px,5vw,82px); line-height:1; color:var(--teal); margin:26px 0 16px; letter-spacing:-.07em; }
+.case-result>strong small { font-size:18px; letter-spacing:0; color:#d4e8e7; }
+.case-result-line { display:flex; justify-content:space-between; gap:10px; padding:12px 0; border-top:1px solid #31565b; font-size:13px; color:#a9c7cd; }
+.case-result-line b { color:#f0faf9; white-space:nowrap; }
+.case-trace { max-width:1040px; margin:0 auto; }
+.case-note { max-width:950px; margin:26px auto 55px; color:var(--muted); font-size:13px; line-height:1.8; }
+.case-note strong { color:#e0f3ed; }
+@media(max-width:980px) { .case-intro,.case-visual-pair { grid-template-columns:1fr; } .case-lead-art { max-width:780px; } .case-explanation { max-width:760px; padding-left:0; } .case-result { max-width:570px; } }
+@media(max-width:720px) { .case-hero { padding:50px 0 65px; } .case-section { padding:65px 0; } .case-visual-pair { gap:22px; } .case-metrics { gap:8px; } .case-metrics span { padding:7px 9px; } }
+
+
+/* Homepage: real-workflow example with large graphical preview. */
+.home-example { background:linear-gradient(145deg,#0d2731,#0a1c26); }
+.home-example-grid { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(34px,6vw,80px); align-items:center; }
+.home-example h2 { font-size:clamp(35px,3.8vw,51px); margin-bottom:25px; }
+.home-example .section-lead { margin-bottom:25px; }
+.home-example-preview { display:block; border:1px solid #45766e; border-radius:15px; overflow:hidden; box-shadow:0 22px 58px rgba(0,0,0,.22); transition:transform .2s; }
+.home-example-preview:hover { transform:translateY(-4px); }
+.home-example-preview img { display:block; width:100%; height:auto; }
+@media(max-width:980px) { .home-example-grid { grid-template-columns:1fr; } .home-example-preview { max-width:780px; } }

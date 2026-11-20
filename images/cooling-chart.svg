@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="585" viewBox="0 0 960 585" role="img" aria-labelledby="t d"><title id="t">A constraint changes the choice</title><desc id="d">Energy use versus feasibility under the supplied model</desc><rect width="960" height="585" fill="#eef4f3"/><rect x="12" y="12" width="936" height="561" rx="20" fill="#ffffff" stroke="#c6dad6" stroke-width="2"/><path d="M32 12 H928 A20 20 0 0 1 948 32 V100 H12 V32 A20 20 0 0 1 32 12 Z" fill="#102a36"/><text x="48" y="53" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#ffffff">A constraint changes the choice</text><text x="48" y="82" font-family="Arial,sans-serif" font-size="15" fill="#b9dbd3">Energy use versus feasibility under the supplied model</text>
+<text x="48" y="153" font-family="Arial,sans-serif" font-size="25" fill="#102a36" font-weight="700">Energy use across scenarios</text>
+<text x="48" y="187" font-family="Arial,sans-serif" font-size="17" fill="#58747c" font-weight="400">The lowest modeled energy is not always a feasible option.</text>
+<path d="M73 441 L894 441" stroke="#d9e5e3" />
+<rect x="139" y="295" width="140" height="146" rx="9" fill="#99b4bb"/>
+<rect x="410" y="266" width="140" height="175" rx="9" fill="#43b69f"/>
+<rect x="681" y="237" width="140" height="204" rx="9" fill="#6a94b5"/>
+<text x="156" y="278" font-family="Arial,sans-serif" font-size="19" fill="#31434a" font-weight="700">160.75 kWh</text>
+<text x="425" y="250" font-family="Arial,sans-serif" font-size="19" fill="#087b6d" font-weight="700">167.50 kWh</text>
+<text x="695" y="222" font-family="Arial,sans-serif" font-size="19" fill="#31434a" font-weight="700">174.25 kWh</text>
+<text x="174" y="476" font-family="Arial,sans-serif" font-size="18" fill="#213b44" font-weight="400">35 L/min</text><text x="445" y="476" font-family="Arial,sans-serif" font-size="18" fill="#213b44" font-weight="400">50 L/min</text><text x="718" y="476" font-family="Arial,sans-serif" font-size="18" fill="#213b44" font-weight="400">65 L/min</text>
+<text x="171" y="510" font-family="Arial,sans-serif" font-size="16" fill="#ad5959" font-weight="400">Not feasible</text><text x="440" y="510" font-family="Arial,sans-serif" font-size="16" fill="#087b6d" font-weight="700">Selected</text><text x="725" y="510" font-family="Arial,sans-serif" font-size="16" fill="#567681" font-weight="400">Feasible</text>
+<text x="48" y="552" font-family="Arial,sans-serif" font-size="14" fill="#65818a" font-weight="400">Synthetic decision model · values are not measured energy savings</text></svg>
