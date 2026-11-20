@@ -18,6 +18,16 @@ Published at: https://ftamas77.github.io/mira-causal-ai-site/
 
 The site uses no JavaScript, analytics, third-party fonts, or trackers. The publications section links to publishers instead of hosting potentially rights-restricted PDFs. It does not contain the backend source, private MCP configuration, or endpoint secrets.
 
+## Positioning and portfolio scope
+
+**mira is a wider causal AI research and engineering initiative, not a PCMCI+ product or a ChatGPT-only company.** The earlier, more extensive private industrial `mira` codebase explores data preparation, multiple causal-discovery approaches, inference, population-level counterfactual workflows, knowledge management and a standalone web interface. The separate, lean private `mira-causal-ai` backend powers this site's current agent-connected research demonstrations. These are distinct codebases; do not imply their capabilities are merged or production-ready.
+
+ChatGPT/MCP is an early demonstration and potential distribution path. A richer scientific backend, dedicated web product, API or other agent interfaces are future options, not promised features. Vertical focus and packaging should follow customer discovery and funded validation. Technical pages may name a specific algorithm to support reproducibility; high-level marketing copy should lead with evidence, methods, domain knowledge and transparent decisions.
+
+## Public ChatGPT conversation policy
+
+An actual ChatGPT + mira conversation could become a compelling case study, but no full private chat is currently authorized for publication. Before publishing, review the exact original conversation, obtain required permissions, redact private messages, third-party data, keys, private endpoints and internal configuration, and identify what was actually executed. Do not present reconstructed or user-transcribed benchmark records as a verbatim conversation. The existing benchmark materials show prompts and reported results, not a complete original conversation transcript.
+
 ## Scientific boundaries
 
 The logistics demonstration is a separate, synthetic research example: four contemporaneous and five lagged reference PCMCI+/ParCorr links from a 1,000-row fixture, and an illustrative explicitly supplied SCM with route results A=78 min, B=72 min. These are not measured real-world operational effects.
