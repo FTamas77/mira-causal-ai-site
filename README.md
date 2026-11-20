@@ -7,7 +7,7 @@ Published at: https://ftamas77.github.io/mira-causal-ai-site/
 ## Pages
 
 - `index.html` — research overview, architecture, capabilities, three Q1 peer-reviewed publications with publisher DOI links, and researcher profile (ORCID, DBLP and university research coverage).
-- `demo.html` — self-contained synthetic logistics demonstration; does not expose private chats or backend credentials.
+- `demo.html` — data-driven cooling-system example with visual summaries based on a real synthetic mira run.
 - `benchmark.html` — blind causal-discovery benchmark on 900 synthetic observations: 15 TP, 3 FP, 0 FN (precision 83.3%, recall 100%, F1 90.9%) in one reported execution.
 - `benchmark-v2/` — the exact benchmark CSV, both original prompts, a reproducible Python generator, evidence JSON and scientific methodology.
 - `support.html` — research contact and public issue tracker.
@@ -20,7 +20,7 @@ The site uses no JavaScript, analytics, third-party fonts, or trackers. The publ
 
 ## Positioning and portfolio scope
 
-**mira is a wider causal AI research and engineering initiative, not a PCMCI+ product or a ChatGPT-only company.** The earlier, more extensive private industrial `mira` codebase explores data preparation, multiple causal-discovery approaches, inference, population-level counterfactual workflows, knowledge management and a standalone web interface. The separate, lean private `mira-causal-ai` backend powers this site's current agent-connected research demonstrations. These are distinct codebases; do not imply their capabilities are merged or production-ready.
+**mira is a wider causal AI research and engineering initiative, not a specialized causal-analysis method product or a ChatGPT-only company.** The earlier, more extensive private industrial `mira` codebase explores data preparation, multiple causal-discovery approaches, inference, population-level counterfactual workflows, knowledge management and a standalone web interface. The separate, lean private `mira-causal-ai` backend powers this site's current agent-connected research demonstrations. These are distinct codebases; do not imply their capabilities are merged or production-ready.
 
 ChatGPT/MCP is an early demonstration and potential distribution path. A richer scientific backend, dedicated web product, API or other agent interfaces are future options, not promised features. Vertical focus and packaging should follow customer discovery and funded validation. Technical pages may name a specific algorithm to support reproducibility; high-level marketing copy should lead with evidence, methods, domain knowledge and transparent decisions.
 
@@ -36,9 +36,9 @@ An actual ChatGPT + mira conversation could become a compelling case study, but 
 
 ## Scientific boundaries
 
-The logistics demonstration is a separate, synthetic research example: four contemporaneous and five lagged reference PCMCI+/ParCorr links from a 1,000-row fixture, and an illustrative explicitly supplied SCM with route results A=78 min, B=72 min. These are not measured real-world operational effects.
+The original logistics illustration was a separate, synthetic research example: four contemporaneous and five lagged reference time-series causal-analysis links from a 1,000-row fixture, and an illustrative explicitly supplied SCM with route results A=78 min, B=72 min. These are not measured real-world operational effects.
 
-The current industrial cooling benchmark was a blind, single-dataset evaluation: the generating graph was not supplied to either chat. The private mira v0.4.0 report returned 18 links, of which 15 matched planted lag-1 links and three were additional links. The ChatGPT-only test performed useful descriptive time-lag correlation analysis but did not execute PCMCI+ in that environment. Neither configuration identified causal intervention effects or an optimal operating point. The structured outputs were transcribed from user-shared ChatGPT session reports, not independently replayed.
+The 900-row industrial cooling benchmark was a blind, single-dataset evaluation: the generating graph was not supplied to either chat. The private mira v0.4.0 report returned 18 links, of which 15 matched planted lag-1 links and three were additional links. The ChatGPT-only test performed useful descriptive time-lag correlation analysis but did not execute specialized causal-analysis method in that environment. Neither configuration identified causal intervention effects or an optimal operating point. The structured outputs were transcribed from user-shared ChatGPT session reports, not independently replayed.
 
 ## Publication notes
 
