@@ -24,6 +24,12 @@ The site uses no JavaScript, analytics, third-party fonts, or trackers. The publ
 
 ChatGPT/MCP is an early demonstration and potential distribution path. A richer scientific backend, dedicated web product, API or other agent interfaces are future options, not promised features. Vertical focus and packaging should follow customer discovery and funded validation. Technical pages may name a specific algorithm to support reproducibility; high-level marketing copy should lead with evidence, methods, domain knowledge and transparent decisions.
 
+## Website research narrative (20 November 2026)
+
+The homepage now leads with the broader industrial research workflow: data preparation, causal discovery, causal inference, population-level counterfactual/scenario exploration, and the reusable causal knowledge loop. Domain expertise, explicit assumptions, verification and transparency cut across those stages. This is not a claim that every stage runs inside the lightweight ChatGPT connector.
+
+The one-run 900-row benchmark remains a **specific causal-discovery experiment**, not evidence for effect estimation, all algorithms, clinical utility or general product superiority. The current ChatGPT app is an early interface option; MIRA's long-term product may instead use richer science services, the separate web interface or other channels depending on future market validation.
+
 ## Public ChatGPT conversation policy
 
 An actual ChatGPT + mira conversation could become a compelling case study, but no full private chat is currently authorized for publication. Before publishing, review the exact original conversation, obtain required permissions, redact private messages, third-party data, keys, private endpoints and internal configuration, and identify what was actually executed. Do not present reconstructed or user-transcribed benchmark records as a verbatim conversation. The existing benchmark materials show prompts and reported results, not a complete original conversation transcript.
