@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="See mira in action: a synthetic industrial cooling case with causal analysis, three modeled interventions and traceable decision results.">
   <meta name="theme-color" content="#08131c">
-  <title>Example usage | mira Causal AI</title>
+  <title>Interactive what-if simulation | mira Causal AI</title>
   <link rel="canonical" href="https://ftamas77.github.io/mira-causal-ai-site/demo.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="mira Causal AI">
-  <meta property="og:title" content="Example usage | mira Causal AI">
+  <meta property="og:title" content="Interactive what-if simulation | mira Causal AI">
   <meta property="og:description" content="See mira in action: a synthetic industrial cooling case with causal analysis, three modeled interventions and traceable decision results.">
   <meta property="og:url" content="https://ftamas77.github.io/mira-causal-ai-site/demo.html">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="style.css">
+  <script src="what-if.js" defer></script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body class="subpage">
@@ -22,24 +23,56 @@
     <div class="container header-inner">
       <a class="brand" href="./" aria-label="mira Causal AI homepage"><span class="brand-symbol" aria-hidden="true">m<span>.</span></span><span class="brand-name">mira <small>CAUSAL AI</small></span></a>
       <nav class="primary-nav" aria-label="Main navigation">
-  <a href="./" >Overview</a>
-  <a href="./#research">Research</a>
-  <a href="demo.html" aria-current="page">Example</a>
+  <a href="./">Overview</a>
+  <a href="./#research">Capabilities</a>
+  <a href="demo.html#what-if" aria-current="page">What-if demo</a>
   <a href="./#publications">Publications</a>
   <a href="benchmark.html">Benchmark</a>
-  <a href="./#about">Researcher</a>
-  <a href="support.html" >Feedback</a>
+  <a href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open an issue</a>
 </nav>
     </div>
   </header>
   <main id="main">
 <section class="page-hero case-hero"><div class="container case-intro">
   <div><p class="eyebrow">EXAMPLE USAGE / INDUSTRIAL COOLING</p><h1>From data to<br><em>better decisions.</em></h1>
-  <p class="page-lead">A real mira-powered ChatGPT research run. Explore relationships in industrial data, then compare modeled interventions against a temperature limit.</p>
+  <p class="page-lead">Explore a real mira research run on synthetic industrial data, then try your own what-if simulation.</p>
   <div class="case-metrics"><span><b>600</b> observations</span><span><b>15</b> reported links</span><span><b>3</b> scenarios</span></div>
-  <div class="button-row"><a class="btn btn-primary" href="#outcomes">See the decision <span aria-hidden="true">↓</span></a><a class="btn btn-ghost" href="benchmark.html">Separate benchmark <span aria-hidden="true">↗</span></a></div></div>
+  <div class="button-row"><a class="btn btn-primary" href="#what-if">Try the simulation <span aria-hidden="true">↓</span></a><a class="btn btn-ghost" href="#outcomes">See the recorded results <span aria-hidden="true">↓</span></a></div></div>
   <figure class="case-lead-art"><img src="images/cooling-decisions.svg" width="960" height="560" alt="Three real modeled outcomes: 35 liters per minute is infeasible, 50 liters per minute is selected, and 65 liters per minute is feasible but uses more energy." loading="eager" decoding="async"><figcaption>Visual summary of the recorded model outputs.</figcaption></figure>
 </div></section>
+<section class="section-block simulator-section" id="what-if">
+<div class="container">
+  <div class="section-heading">
+    <div><p class="eyebrow">INTERACTIVE / WHAT-IF SIMULATION</p><h2>Change the inputs.<br><span class="accent">See what changes.</span></h2></div>
+    <p class="section-aside">Explore hypothetical cooling decisions. Change a condition and compare the consequences.</p>
+  </div>
+  <div class="simulator-shell">
+    <div class="simulator-controls">
+      <div class="simulator-panel-head"><span class="sim-mini">SCENARIO INPUTS</span><span class="sim-live">Interactive model</span></div>
+      <div class="simulator-field"><div class="simulator-field-top"><label for="flowInput">Coolant flow</label><output id="flowValue" for="flowInput">50 L/min</output></div><input type="range" id="flowInput" min="35" max="65" step="15" value="50"><div class="simulator-range"><span>35 L/min</span><span>65 L/min</span></div></div>
+      <div class="simulator-field"><div class="simulator-field-top"><label for="loadInput">Production load</label><output id="loadValue" for="loadInput">80%</output></div><input type="range" id="loadInput" min="60" max="90" step="5" value="80"><div class="simulator-range"><span>60%</span><span>90%</span></div></div>
+      <div class="simulator-field"><div class="simulator-field-top"><label for="ambientInput">Ambient temperature</label><output id="ambientValue" for="ambientInput">29°C</output></div><input type="range" id="ambientInput" min="24" max="34" step="1" value="29"><div class="simulator-range"><span>24°C</span><span>34°C</span></div></div>
+      <button class="simulator-reset" id="simReset" type="button">Reset scenario ↺</button>
+    </div>
+    <div class="simulator-readout">
+      <div class="simulator-panel-head"><span class="sim-mini">MODELED OUTCOMES</span><span class="sim-hypothesis">72°C limit</span></div>
+      <div class="simulator-readout-grid">
+        <div><span>Machine temperature</span><strong id="simTemp">71.35°C</strong></div>
+        <div><span>Energy use</span><strong id="simEnergy">167.50 kWh</strong></div>
+      </div>
+      <div class="sim-thermometer"><div class="sim-temp-bar" id="simTempBar" style="width:56.75%"></div><span class="sim-temp-limit"></span></div>
+      <div class="simulator-verdict" id="simVerdict" role="status" aria-live="polite">✓ Within temperature limit</div>
+      <div class="simulator-best"><span>Best feasible of the 3 compared settings</span><strong id="simRecommendation" aria-live="polite">50 L/min</strong></div>
+      <p class="simulator-hint">Illustrative model using hypothetical coefficients, not live plant data.</p>
+    </div>
+  </div>
+  <div class="simulator-scenarios" aria-label="Comparison of three coolant flow options">
+    <div class="sim-option" id="option35"><span>35 L/min</span><strong id="option35Energy">160.75 kWh</strong><small id="option35Temp">74.35°C · Above limit</small></div>
+    <div class="sim-option best" id="option50"><span>50 L/min</span><strong id="option50Energy">167.50 kWh</strong><small id="option50Temp">71.35°C · Recommended</small></div>
+    <div class="sim-option" id="option65"><span>65 L/min</span><strong id="option65Energy">174.25 kWh</strong><small id="option65Temp">68.35°C · Feasible</small></div>
+  </div>
+</div>
+</section>
 <section class="section-block case-section"><div class="container">
  <div class="section-heading"><div><p class="eyebrow">01 / ANALYZE</p><h2>Find meaningful<br><span class="accent">relationships.</span></h2></div><p class="section-aside">Six industrial signals, 600 observations, and 15 statistically reported time-lagged relationships.</p></div>
  <div class="case-visual-pair">
@@ -64,17 +97,17 @@
 <section class="section-block case-section"><div class="container">
  <div class="section-heading"><div><p class="eyebrow">03 / VERIFY</p><h2>See how the decision<br><span class="accent">was calculated.</span></h2></div><p class="section-aside">Inputs, equations, interventions and constraint checks stay inspectable.</p></div>
  <figure class="case-trace"><img src="images/cooling-trace.svg" width="960" height="580" alt="The computation trace for 50 liters per minute: intervention do(coolant_flow_lpm equals 50); modeled energy 167.50 kilowatt hours, temperature 71.35 degrees Celsius, temperature constraint passed." loading="lazy" decoding="async"><figcaption>Visualized from the execution trace returned by mira.</figcaption></figure>
- <div class="case-note"><p><strong>Two separate operations.</strong> Relationships were analyzed from the synthetic dataset. The intervention comparison used a separately supplied hypothetical causal model. Its coefficients were not estimated from the dataset, and this is not a validated operating recommendation.</p></div>
- <div class="page-cta"><div><h2>More evidence, fewer claims.</h2><p>See the separate ChatGPT comparison and its full scored synthetic test.</p></div><a class="btn btn-primary" href="benchmark.html">Explore benchmark <span aria-hidden="true">↗</span></a></div>
+ <p class="case-note">The what-if model uses supplied assumptions; it was not fitted from the discovery results.</p>
+ <div class="page-cta"><div><h2>Have a scenario in mind?</h2><p>Share a research question or collaboration idea.</p></div><a class="btn btn-primary" href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open a GitHub issue <span aria-hidden="true">↗</span></a></div>
 </div></section>
 </main>
   <footer class="site-footer">
-    <div class="container footer-main">
-      <div><a class="footer-brand" href="./">mira<span>.</span> <small>CAUSAL AI</small></a><p>Causal research, evidence and decisions.</p></div>
-      <div class="footer-links"><span class="footer-label">Explore</span><a href="./">Overview</a><a href="demo.html">Usage example</a><a href="benchmark.html">ChatGPT comparison</a><a href="./#publications">Publications</a><a href="./#about">Researcher</a></div>
-      <div class="footer-links"><span class="footer-label">Information</span><a href="support.html">Feedback</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of use</a></div>
-    </div>
-    <div class="container footer-bottom"><span>mira Causal AI · Research &amp; Engineering</span><span>Research and engineering</span></div>
-  </footer>
+  <div class="container footer-main">
+    <div><a class="footer-brand" href="./">mira<span>.</span> <small>CAUSAL AI</small></a><p>Understand why. Explore what if.</p></div>
+    <div class="footer-links"><span class="footer-label">Explore</span><a href="./">Overview</a><a href="demo.html#what-if">What-if demo</a><a href="benchmark.html">Benchmark</a><a href="./#publications">Publications</a></div>
+    <div class="footer-links"><span class="footer-label">Connect</span><a href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open an issue</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+  </div>
+  <div class="container footer-bottom"><span>mira Causal AI</span><span>Research &amp; Engineering</span></div>
+</footer>
 </body>
 </html>
