@@ -274,6 +274,7 @@ h1 em,.accent { color: var(--teal); font-style: normal; }
 .hero-benchmark-link a{color:var(--teal);font-weight:700}
 @media(max-width:720px){.home-benchmark-card{padding:19px}.home-benchmark-rows div{gap:9px}}
 
+.research-paths { margin-top: 27px; max-width: 940px; line-height: 1.85; }
 /* Publication evidence: restrained styling that prioritizes verifiable papers. */
 .publications-band { background: radial-gradient(ellipse at 12% 0%,rgba(35,100,92,.10),transparent 50%),#091923; }
 .publications-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:17px; }
