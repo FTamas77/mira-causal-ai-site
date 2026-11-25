@@ -1,0 +1,15 @@
+/* Scoped development-preview layout; existing pages unchanged. */
+.inv-flow,.inv-architecture{display:grid;gap:14px;margin:28px 0 36px}
+.inv-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+.inv-architecture{grid-template-columns:repeat(2,minmax(0,1fr));max-width:850px;margin-inline:auto}
+.inv-node,.inv-store{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--surface)}
+.inv-node h3,.inv-store h3{font-size:clamp(19px,2vw,26px);margin:12px 0}
+.inv-node p,.inv-store p{color:var(--muted);margin-bottom:12px}
+.inv-node strong{color:var(--teal)}
+.inv-node .label,.inv-store .label{font-size:11px;letter-spacing:.12em;color:var(--teal);font-weight:700}
+.inv-connector,.inv-arrow{text-align:center;color:var(--teal);font-size:14px}
+.inv-connector{font-size:27px;line-height:1}
+.inv-store,.inv-wide{grid-column:1/-1}
+.inv-store{background:linear-gradient(135deg,#123a35,#102632);border-color:#52877f;text-align:center}
+.inv-architecture .inv-wide{text-align:center}
+@media(max-width:720px){.inv-flow,.inv-architecture{grid-template-columns:1fr}.inv-connector{display:none}.inv-store{grid-column:1}.inv-node,.inv-store{padding:20px}}

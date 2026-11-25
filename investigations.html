@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Development preview of authenticated persistent causal investigations: a live synthetic logistics demonstration across three ChatGPT conversations.">
+<meta name="theme-color" content="#08131c">
+<title>Persistent Causal Investigations | mira Causal AI development preview</title>
+<link rel="canonical" href="https://ftamas77.github.io/mira-causal-ai-site/investigations.html">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="benchmark.css"><link rel="stylesheet" href="investigations.css"><link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head><body class="subpage">
+<a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="mira Causal AI homepage"><span class="brand-symbol" aria-hidden="true">m<span>.</span></span><span class="brand-name">mira <small>CAUSAL AI</small></span></a>
+      <nav class="primary-nav" aria-label="Main navigation">
+  <a href="./#research">Capabilities</a>
+  <a href="demo.html#what-if">What-if demo</a>
+  <a href="benchmark.html">Benchmark</a>
+  <a href="./#publications">Publications</a>
+  <a href="./#expertise">Expertise</a>
+  <a href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open an issue</a>
+</nav>
+    </div>
+  </header>
+  
+<main id="main">
+<section class="bench-hero"><div class="container bench-hero-inner">
+<div><p class="eyebrow">DEVELOPMENT PREVIEW / v0.5.0-dev</p><h1>One investigation.<br><em>Multiple conversations.</em></h1><p class="hero-lead">Continue evidence-based causal investigations across independent AI conversations, retaining structured evidence, provenance and revisions.</p><p class="body-muted">A live local-development demonstration, performed on November 25, 2026 with synthetic logistics data. This research preview is separate from the submitted v0.4.0 release; it is not a released or publicly accessible investigation service.</p><div class="button-row"><a class="btn btn-primary" href="#results">Explore the results ↓</a><a class="btn btn-ghost" href="#protocol">Test protocol ↓</a></div></div>
+<div class="hero-proof"><div class="proof-eyebrow">LIVE FUNCTIONAL DEMONSTRATION</div><div class="giant">4<span> / 4</span></div><p class="proof-caption">All four planned functional checks completed successfully, including retrieval in independent conversations and continuation of the same investigation.</p><div class="proof-mini"><div><b>3</b><span>Conversations</span></div><div><b>2</b><span>Evidence entries retained</span></div><div><b>2</b><span>Final revision</span></div></div><p class="bench-note">Author-run development demonstration based on actual client-reported tool results, not an independent audit or a reliability statistic.</p></div>
+</div></section>
+<section class="bench-block" id="results"><div class="container">
+<div class="bench-heading"><div><p class="eyebrow">01 / PERSISTENT STATE</p><h2>Evidence survives<br><span class="accent">a new conversation.</span></h2></div><p>The second and third conversations received only the investigation title, not the stored ID or evidence values. Both retrieved the existing record using the connected app.</p></div>
+<div class="inv-flow" aria-label="Three conversations share the same investigation">
+<article class="inv-node"><span class="label">CONVERSATION A</span><h3>Create &amp; record</h3><p>Create revision 0, append rainfall assumption, read revision 1.</p><strong>Revision 1 · 1 entry</strong></article>
+<article class="inv-node"><span class="label">CONVERSATION B</span><h3>Retrieve &amp; extend</h3><p>List and get revision 1, append traffic assumption, read revision 2.</p><strong>Revision 2 · 2 entries</strong></article>
+<article class="inv-node"><span class="label">CONVERSATION C</span><h3>Retrieve again</h3><p>List and get the same investigation, without supplying stored data.</p><strong>Revision 2 · 2 entries</strong></article>
+<div class="inv-connector" aria-hidden="true">↕</div><div class="inv-connector" aria-hidden="true">↕</div><div class="inv-connector" aria-hidden="true">↕</div>
+<div class="inv-store"><span class="label">MIRA INVESTIGATION STORAGE</span><h3>Same authenticated owner · same investigation</h3><p>Revisioned evidence stored outside the conversation. Local SQLite development database.</p></div></div>
+<div class="bench-table-wrap"><table class="bench-table"><caption>Final evidence snapshot returned in conversation C</caption><thead><tr><th scope="col">Revision</th><th scope="col">Variable</th><th scope="col">Value</th><th scope="col">Source type</th><th scope="col">Source reference</th></tr></thead><tbody><tr><td>1</td><td><code>rain_mm</code></td><td>12.5</td><td>assumption</td><td>Synthetic owner-provided pilot value</td></tr><tr><td>2</td><td><code>traffic_delay_min</code></td><td>18</td><td>assumption</td><td>Synthetic traffic scenario</td></tr></tbody></table></div>
+<p class="bench-note">Both values are synthetic assumptions, not measured logistics observations or verified causal effects.</p>
+</div></section>
+<section class="bench-block" id="architecture"><div class="container"><div class="bench-heading"><div><p class="eyebrow">02 / SYSTEM ARCHITECTURE</p><h2>Persistent investigations.<br><span class="accent">Stateless causal computation.</span></h2></div><p>Authentication and investigation storage are separate from the existing scientific computation engine.</p></div>
+<div class="inv-architecture"><div class="inv-node"><span class="label">AI CLIENT</span><h3>ChatGPT</h3><p>Conversation, evidence collection, explicit tool selection</p></div><div class="inv-node"><span class="label">IDENTITY PROVIDER</span><h3>OAuth / Auth0</h3><p>User authentication, scoped token issuance</p></div><div class="inv-wide inv-arrow">↓ Authenticated MCP request via secure tunnel</div><div class="inv-node inv-wide"><span class="label">RESOURCE SERVER</span><h3>mira Investigation MCP</h3><p>JWT verification, scope checks, owner-scoped access</p></div><div class="inv-wide inv-arrow">↓ Revisioned transactions</div><div class="inv-node inv-wide"><span class="label">PERSISTENT STATE</span><h3>Investigation storage</h3><p>Evidence, provenance, revision and write receipts</p></div></div>
+<p class="bench-note">Conceptual architecture of the local development pilot. Existing causal tools remain stateless and separate; they still require complete explicit inputs. The persistence demonstration did not execute a new causal-discovery or decision calculation.</p></div></section>
+<section class="bench-block" id="protocol"><div class="container"><div class="bench-heading"><div><p class="eyebrow">03 / REPRODUCIBLE PROTOCOL</p><h2>Four functional checks.</h2></div><p>Use the authenticated development connector and synthetic data. The demonstration requires access to the local development backend; the public release cannot execute these storage operations.</p></div>
+<div class="bench-table-wrap"><table class="bench-table"><thead><tr><th scope="col">Check</th><th scope="col">Action</th><th scope="col">Observed result</th></tr></thead><tbody><tr><td>1 · Chat A</td><td>Create, append, retrieve</td><td>Revision 1; rainfall evidence returned</td></tr><tr><td>2 · Chat B</td><td>List, find by title, retrieve</td><td>Same ID and revision 1</td></tr><tr><td>3 · Chat B</td><td>Retrieve, append with expected revision, retrieve</td><td>Same ID, revision 2, both entries</td></tr><tr><td>4 · Chat C</td><td>List, find by title, retrieve</td><td>Same ID, revision 2, identical provenance</td></tr></tbody></table></div>
+<details class="bench-details"><summary>Prompt sequence and test inputs</summary><ol><li>In a new chat, create “Synthetic logistics pilot” with a fresh idempotency key. Append rain_mm = 12.5, source_type assumption, source_ref “Synthetic owner-provided pilot value” using the returned ID and revision. Read the record.</li><li>In another chat, explicitly select the app, list investigations and retrieve “Synthetic logistics pilot” by title. Report the actual ID, revision and evidence without using chat history.</li><li>In the same chat, explicitly select the app again. Append traffic_delay_min = 18, source_type assumption, source_ref “Synthetic traffic scenario” using a new idempotency key and current revision. Retrieve the record.</li><li>In a third chat, explicitly select the app, list and retrieve by title only. Report revision and evidence without modification.</li></ol></details>
+<div class="bench-diff"><b>Observed integration limitation:</b> some follow-up turns displayed a message-stream error or reported the tool unavailable. Explicit app selection restored operation. The root cause was not established. The four completed checks are not four error-free first attempts.</div>
+</div></section>
+<section class="bench-block"><div class="container"><div class="bench-heading"><div><p class="eyebrow">04 / SCOPE AND LIMITATIONS</p><h2>Development, not release.</h2></div><p>One authenticated test user, one synthetic record, three conversations. Results are based on actual app execution summaries provided by the author.</p></div><div class="bench-grid"><article class="bench-panel highlight"><h3>Demonstrated</h3><ul><li>Authenticated create, append and read</li><li>Cross-conversation retrieval</li><li>Continuation with revisioned evidence and provenance</li></ul></article><article class="bench-panel"><h3>Still to validate live</h3><ul><li>Token renewal and separate-user isolation</li><li>Persistence across server restarts and hosted durability</li><li>Production readiness and client reliability</li></ul></article></div><p class="bench-note">v0.5.0-dev is a development-preview label, not a released package version. The submitted v0.4.0 release and its existing scientific benchmarks remain separate.</p><a class="btn btn-ghost" href="benchmark.html">Explore the existing causal-discovery benchmark ↗</a></div></section>
+</main><footer class="site-footer">
+  <div class="container footer-main">
+    <div><a class="footer-brand" href="./">mira<span>.</span> <small>CAUSAL AI</small></a><p>Bringing causal intelligence to generative AI.</p></div>
+    <div class="footer-links"><span class="footer-label">Explore</span><a href="./#research">Capabilities</a><a href="demo.html#what-if">What-if demo</a><a href="benchmark.html">Benchmark</a><a href="./#publications">Publications</a><a href="./#expertise">Expertise</a></div>
+    <div class="footer-links"><span class="footer-label">Information</span><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+  </div>
+  <div class="container footer-bottom"><span>mira Causal AI</span><span>Research &amp; Engineering</span></div>
+</footer>
+</body></html>
