@@ -38,7 +38,7 @@
   <p class="page-lead">Explore a real mira research run on synthetic industrial data, then try your own what-if simulation.</p>
   <div class="case-metrics"><span><b>600</b> observations</span><span><b>15</b> reported links</span><span><b>3</b> scenarios</span></div>
   <div class="button-row"><a class="btn btn-primary" href="#what-if">Try the simulation</a><a class="btn btn-ghost" href="#outcomes">See the recorded results</a></div></div>
-  <figure class="case-lead-art"><img src="images/cooling-decisions.svg" width="960" height="560" alt="Three real modeled outcomes: 35 liters per minute is infeasible, 50 liters per minute is selected, and 65 liters per minute is feasible but uses more energy." loading="eager" decoding="async"><figcaption>Visual summary of the recorded model outputs.</figcaption></figure>
+  <figure class="case-lead-art"><img src="images/cooling-decisions.svg?v=20261126b" width="960" height="560" alt="Three real modeled outcomes: 35 liters per minute is infeasible, 50 liters per minute is selected, and 65 liters per minute is feasible but uses more energy." loading="eager" decoding="async"><figcaption>Visual summary of the recorded model outputs.</figcaption></figure>
 </div></section>
 <section class="section-block simulator-section" id="what-if">
 <div class="container">
@@ -76,14 +76,14 @@
 <section class="section-block case-section"><div class="container">
  <div class="section-heading"><div><h2>Causal discovery</h2></div><p class="section-aside">Six industrial signals, 600 observations, and 15 statistically reported time-lagged relationships.</p></div>
  <div class="case-visual-pair">
-  <figure class="case-visual"><img src="images/cooling-analysis.svg" width="960" height="535" alt="A visualization of the reported analysis: 600 observations sampled every 15 minutes with 15 temporal relationships; three representative links and p-values are shown." loading="lazy" decoding="async"><figcaption>Selected relationships from the actual result.</figcaption></figure>
+  <figure class="case-visual"><img src="images/cooling-analysis.svg?v=20261126b" width="960" height="535" alt="A visualization of the reported analysis: 600 observations sampled every 15 minutes with 15 temporal relationships; three representative links and p-values are shown." loading="lazy" decoding="async"><figcaption>Selected relationships from the actual result.</figcaption></figure>
   <div class="case-explanation"><span class="case-step">01</span><h3>Reported causal relationships</h3><p>Production load, cooling flow and machine temperature show measurable temporal dependencies. These are statistical findings, not automatically proven intervention effects.</p><span class="case-divider"></span><h3>From discovery to an explicit model</h3><p>Specify the decision model and the assumptions to test possible actions.</p></div>
  </div>
 </div></section>
 <section class="section-block case-section case-feature" id="outcomes"><div class="container">
  <div class="section-heading"><div><h2>Intervention comparison under constraints</h2></div><p class="section-aside">Three synthetic cooling-flow settings were evaluated against the same modeled temperature limit.</p></div>
  <div class="case-visual-pair">
-  <figure class="case-visual"><img src="images/cooling-chart.svg" width="960" height="585" alt="Modeled energy across coolant-flow scenarios: 35 liters per minute 160.75 kilowatt hours but infeasible; 50 liters per minute 167.50 selected; 65 liters per minute 174.25 feasible." loading="lazy" decoding="async"><figcaption>Modeled energy, with feasibility taken into account.</figcaption></figure>
+  <figure class="case-visual"><img src="images/cooling-chart.svg?v=20261126b" width="960" height="585" alt="Modeled energy across coolant-flow scenarios: 35 liters per minute 160.75 kilowatt hours but infeasible; 50 liters per minute 167.50 selected; 65 liters per minute 174.25 feasible." loading="lazy" decoding="async"><figcaption>Modeled energy, with feasibility taken into account.</figcaption></figure>
   <div class="case-result">
     <span class="case-step">SELECTED SCENARIO</span>
     <strong>50 <small>L/min</small></strong>
@@ -96,7 +96,7 @@
 </div></section>
 <section class="section-block case-section"><div class="container">
  <div class="section-heading"><div><h2>Calculation and assumptions</h2></div><p class="section-aside">Inputs, equations, interventions and constraint checks stay inspectable.</p></div>
- <figure class="case-trace"><img src="images/cooling-trace.svg" width="960" height="580" alt="The computation trace for 50 liters per minute: intervention do(coolant_flow_lpm equals 50); modeled energy 167.50 kilowatt hours, temperature 71.35 degrees Celsius, temperature constraint passed." loading="lazy" decoding="async"><figcaption>Visualized from the execution trace returned by mira.</figcaption></figure>
+ <figure class="case-trace"><img src="images/cooling-trace.svg?v=20261126b" width="960" height="580" alt="The computation trace for 50 liters per minute: intervention do(coolant_flow_lpm equals 50); modeled energy 167.50 kilowatt hours, temperature 71.35 degrees Celsius, temperature constraint passed." loading="lazy" decoding="async"><figcaption>Visualized from the execution trace returned by mira.</figcaption></figure>
  <p class="case-note">The what-if model uses supplied assumptions; it was not fitted from the discovery results.</p>
  <div class="page-cta"><div><h2>Research collaboration</h2><p>Share a research question or collaboration idea.</p></div><a class="btn btn-primary" href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open a GitHub issue</a></div>
 </div></section>
