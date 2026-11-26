@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Blind 900-row synthetic benchmark: ChatGPT alone vs ChatGPT with mira Causal AI. Mira's analysis recovered 15/15 planted lagged links, with 3 additional links.">
-<meta name="theme-color" content="#f8faf9">
+<meta name="theme-color" content="#f8f9f5">
 <title>Blind causal-discovery benchmark | ChatGPT vs mira Causal AI</title>
 <link rel="canonical" href="https://ftamas77.github.io/mira-causal-ai-site/benchmark.html">
 <meta property="og:type" content="website">
@@ -11,7 +11,7 @@
 <meta property="og:description" content="900 synthetic observations; 15 true-positive links and 3 extra links reported by mira, and a transparent comparison with ChatGPT-only descriptive analysis.">
 <meta property="og:url" content="https://ftamas77.github.io/mira-causal-ai-site/benchmark.html">
 <meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css?v=20261126"><link rel="stylesheet" href="benchmark.css">
+<link rel="stylesheet" href="style.css?v=20261126b">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head><body class="subpage"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner"><a class="brand" href="./" aria-label="mira Causal AI homepage"><span class="brand-symbol" aria-hidden="true">m<span>.</span></span><span class="brand-name">mira <small>CAUSAL AI</small></span></a><nav class="primary-nav" aria-label="Main navigation">
   <a href="./#research">Approach</a>
@@ -23,32 +23,32 @@
 </nav></div></header>
 <main id="main">
 <section class="bench-hero"><div class="container bench-hero-inner">
-<div><p class="eyebrow">BLIND SYNTHETIC BENCHMARK</p><h1>Causal discovery benchmark</h1>
+<div><p class="eyebrow">Research / synthetic experiment</p><h1>Causal discovery benchmark</h1>
 <p class="hero-lead">Two new ChatGPT conversations received the same unseen, 900-row synthetic industrial cooling dataset. One used the lightweight mira connector; the other used ordinary built-in analysis.</p>
 <p class="body-muted">ChatGPT alone identified interesting delayed correlations but could not execute specialized discovery in its test sandbox. The mira-enabled run reported formal causal-discovery results, scored afterward against the hidden synthetic generating structure. The comparison concerns this specific experimental workflow.</p>
-<div class="button-row"><a class="btn btn-primary" href="#comparison">Compare the executions <span aria-hidden="true">↘</span></a><a class="btn btn-ghost" href="#evidence">Inspect the results <span aria-hidden="true">↘</span></a></div>
+<div class="button-row"><a class="btn btn-primary" href="#comparison">Compare the executions</a><a class="btn btn-ghost" href="#evidence">Inspect the results</a></div>
 <div class="bench-meta"><span>900 synthetic observations</span><span>6 variables</span><span>Blind held-out generating graph</span><span>One test per configuration</span></div>
 </div>
-<div class="hero-proof"><div class="proof-eyebrow">MIRA REPORTED GRAPH · SCORED AFTER THE TEST</div><div class="giant">15<span> / 15</span></div>
+<div class="hero-proof"><div class="proof-eyebrow">Recovery of planted links</div><div class="giant">15<span> / 15</span></div>
 <p class="proof-caption">All planted temporal links found. Three additional links were reported and counted as false positives.</p>
 <div class="link-breakdown"><span>9/9 cross-variable links recovered</span><span>6/6 self-links recovered</span></div>
 <div class="proof-mini"><div><b>83.3%</b><span>Precision</span></div><div><b>100%</b><span>Recall</span></div><div><b>90.9%</b><span>F1 score</span></div></div>
 <p class="bench-note">18 reported links: 15 true positives, 3 false positives, 0 false negatives. The scores are for a single synthetic dataset, not a population or real-world performance guarantee.</p>
 </div></div></section>
 <section class="bench-block" id="comparison"><div class="container">
-<div class="bench-heading"><div><p class="eyebrow">01 / SAME DATA, DIFFERENT TOOLS</p><h2>Experimental setup</h2></div><p>Both runs used the same 900 × 6 numeric data, lags 0–2, α = 0.05 and no causal priors. Neither was supplied with structural equations or the generating graph.</p></div>
+<div class="bench-heading"><div><h2>Experimental setup</h2></div><p>Both runs used the same 900 × 6 numeric data, lags 0–2, α = 0.05 and no causal priors. Neither was supplied with structural equations or the generating graph.</p></div>
 <div class="bench-grid">
-<article class="bench-panel"><span class="label">ChatGPT only / built-in Python</span><span class="bench-flag neutral">Specialized analysis not executed</span><h3>Useful exploratory analysis</h3>
+<article class="bench-panel"><span class="label">ChatGPT only / built-in Python</span><span class="bench-flag neutral">Specialized analysis not executed</span><h3>Exploratory analysis</h3>
 <p>The baseline checked the complete file and calculated ordinary lagged Pearson correlations with Python, pandas and NumPy. The required scientific package was unavailable in that environment; installing it was outside the test protocol.</p>
 <ul><li>900 valid observations; 899 exact 15-minute intervals</li><li>Strong lagged flow–temperature associations identified</li><li>No formal causal-discovery edge table or conditional-independence tests</li><li>Correctly declined to estimate do-effects or an optimal cooling flow</li></ul></article>
-<article class="bench-panel highlight"><span class="label">ChatGPT + private mira v0.4.0</span><span class="bench-flag passed">Formal discovery completed</span><h3>Specialized, structured discovery</h3>
+<article class="bench-panel highlight"><span class="label">ChatGPT + private mira v0.4.0</span><span class="bench-flag passed">Formal discovery completed</span><h3>Formal causal discovery</h3>
 <p>The user-shared report records a completed formal time-series analysis using all 900 observations.</p>
 <ul><li>16 lagged links + 2 same-time links reported</li><li>15 planted lag-1 links recovered</li><li>3 extra links (2 same-time, 1 lagged)</li><li>260 reported CI-test calls, test statistics and input identifiers</li><li>Correctly declined unidentifiable intervention-effect claims</li></ul></article>
 </div>
 <div class="bench-diff"><b>What mira added here:</b> an available formal time-series causal discovery execution path and an inspectable temporal link graph, not simply arithmetic or a plausible explanation. The baseline demonstrated real exploratory value too. This experiment measures two specific tool configurations—not the inherent ability of ChatGPT to use scientific Python elsewhere.</div>
 </div></section>
 <section class="bench-block" id="lag-example"><div class="container">
-<div class="bench-heading"><div><p class="eyebrow">02 / THE KEY SCIENTIFIC CONTRAST</p><h2>Correlation and direct temporal links</h2></div><p>Without conditioning on the other variables and temporal dependencies, the largest observed raw correlation can appear at a different lag from a planted structural link.</p></div>
+<div class="bench-heading"><div><h2>Correlation and direct temporal links</h2></div><p>Without conditioning on the other variables and temporal dependencies, the largest observed raw correlation can appear at a different lag from a planted structural link.</p></div>
 <div class="bench-grid">
 <div class="bench-panel"><span class="label">Descriptive Pearson / ChatGPT-only</span>
 <h3>Flow → temperature</h3>
@@ -62,14 +62,14 @@
 </div>
 </div></section>
 <section class="bench-block" id="graph"><div class="container">
-<div class="bench-heading"><div><p class="eyebrow">03 / SCORED AGAINST HELD-OUT TRUTH</p><h2>Recovery of planted links</h2></div><p>After both chats returned results, we scored every reported source–target–lag triple against the previously withheld simulator equations. This is an author-run synthetic evaluation, not an external audit.</p></div>
+<div class="bench-heading"><div><h2>Recovery of planted links</h2></div><p>After both chats returned results, we scored every reported source–target–lag triple against the previously withheld simulator equations. This is an author-run synthetic evaluation, not an external audit.</p></div>
 <div class="bench-accuracy"><div><strong>15</strong><span>True positive links</span></div><div><strong>3</strong><span>False positive links</span></div><div><strong>0</strong><span>False negatives</span></div><div><strong>90.9%</strong><span>F1 (all links)</span></div></div>
-<div class="bench-matrix-wrap"><p class="bench-note"><strong>Reported lag-1 links (16 total).</strong> Rows are source variables at t−1, columns are targets at t. Full evidence, including both same-time extra edges, follows.</p>
+<div class="bench-matrix-wrap" tabindex="0" role="region" aria-label="Lagged causal relationship matrix"><p class="bench-note"><strong>Reported lag-1 links (16 total).</strong> Rows are source variables at t−1, columns are targets at t. Full evidence, including both same-time extra edges, follows.</p>
 <div class="bench-matrix bench-matrix-six" role="img" aria-label="Six-by-six lag-1 link matrix. Fifteen filled cells match the generating graph, one filled cell is an extra link from vibration to flow. An accessible full link table follows."><div class="matrix-top">SOURCE ↓ / TARGET →</div><div class="matrix-top">Ambient</div><div class="matrix-top">Load</div><div class="matrix-top">Flow</div><div class="matrix-top">Temp.</div><div class="matrix-top">Energy</div><div class="matrix-top">Vibration</div><div class="matrix-source">Ambient <small>t−1</small></div><div class="matrix-cell active warming" title="Ambient at lag 1 to Ambient; partial r 0.5424, p-value 1.38e-69, matches ground truth"><span>+0.542</span><small>match</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-cell active warming" title="Ambient at lag 1 to Temp.; partial r 0.2454, p-value 1.06e-13, matches ground truth"><span>+0.245</span><small>match</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-source">Load <small>t−1</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell active warming" title="Load at lag 1 to Load; partial r 0.472, p-value 8.35e-51, matches ground truth"><span>+0.472</span><small>match</small></div><div class="matrix-cell active warming" title="Load at lag 1 to Flow; partial r 0.8201, p-value 1.01e-217, matches ground truth"><span>+0.820</span><small>match</small></div><div class="matrix-cell active warming" title="Load at lag 1 to Temp.; partial r 0.6795, p-value 1.42e-121, matches ground truth"><span>+0.679</span><small>match</small></div><div class="matrix-cell active warming" title="Load at lag 1 to Energy; partial r 0.4867, p-value 2.78e-54, matches ground truth"><span>+0.487</span><small>match</small></div><div class="matrix-cell active warming" title="Load at lag 1 to Vibration; partial r 0.3863, p-value 4.04e-33, matches ground truth"><span>+0.386</span><small>match</small></div><div class="matrix-source">Flow <small>t−1</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-cell active warming" title="Flow at lag 1 to Flow; partial r 0.4069, p-value 9.87e-37, matches ground truth"><span>+0.407</span><small>match</small></div><div class="matrix-cell active cooling" title="Flow at lag 1 to Temp.; partial r -0.4647, p-value 7.10e-49, matches ground truth"><span>-0.465</span><small>match</small></div><div class="matrix-cell active warming" title="Flow at lag 1 to Energy; partial r 0.2557, p-value 9.53e-15, matches ground truth"><span>+0.256</span><small>match</small></div><div class="matrix-cell empty">—</div><div class="matrix-source">Temp. <small>t−1</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-cell active warming" title="Temp. at lag 1 to Flow; partial r 0.6177, p-value 1.22e-94, matches ground truth"><span>+0.618</span><small>match</small></div><div class="matrix-cell active warming" title="Temp. at lag 1 to Temp.; partial r 0.32, p-value 1.27e-22, matches ground truth"><span>+0.320</span><small>match</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell active warming" title="Temp. at lag 1 to Vibration; partial r 0.5479, p-value 8.39e-71, matches ground truth"><span>+0.548</span><small>match</small></div><div class="matrix-source">Energy <small>t−1</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-cell active warming" title="Energy at lag 1 to Energy; partial r 0.3743, p-value 5.25e-31, matches ground truth"><span>+0.374</span><small>match</small></div><div class="matrix-cell empty">—</div><div class="matrix-source">Vibration <small>t−1</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-cell active spurious" title="Vibration at lag 1 to Flow; partial r -0.0944, p-value 0.004863, extra reported link"><span>-0.094</span><small>extra</small></div><div class="matrix-cell empty">—</div><div class="matrix-cell empty">—</div><div class="matrix-cell active warming" title="Vibration at lag 1 to Vibration; partial r 0.3654, p-value 1.59e-29, matches ground truth"><span>+0.365</span><small>match</small></div></div>
 <div class="bench-legend"><span><i class="bench-key"></i> Positive test statistic</span><span><i class="bench-key negative"></i> Negative test statistic</span><span><i class="bench-key extra"></i> Extra reported link</span></div></div>
-<details class="bench-details" id="link-evidence" open><summary>Complete backend-reported edge table (18 links, all statistics)</summary>
+<details class="bench-details" id="link-evidence"><summary>Complete backend-reported edge table (18 links, all statistics)</summary>
 <p>Every link has <code>existence_basis=statistical_test</code> and mark <code>--&gt;</code>. Lagged orientations come from time order; same-time orientations are the method's reported output. “Extra” means absent from the simulator's direct graph, not necessarily evidence of model misconduct.</p>
-<div class="bench-table-wrap"><table class="bench-table"><caption class="visually-hidden">Eighteen reported formal discovery links, their partial correlations, p-values and comparison to the held-out simulator graph</caption><thead><tr><th scope="col">Source</th><th scope="col">Target</th><th scope="col">Lag</th><th scope="col">Partial r</th><th scope="col">p-value</th><th scope="col">Ground truth</th></tr></thead><tbody><tr class="bench-fp"><td><code>machine_temp_C</code></td><td><code>vibration_mm_s</code></td><td>0</td><td><span class="signed negative">-0.0785</span></td><td><code>0.01921</code></td><td><span class="bench-fp-mark">EXTRA</span></td></tr>
+<div class="bench-table-wrap" tabindex="0" role="region" aria-label="Scrollable research results table"><table class="bench-table"><caption class="visually-hidden">Eighteen reported formal discovery links, their partial correlations, p-values and comparison to the held-out simulator graph</caption><thead><tr><th scope="col">Source</th><th scope="col">Target</th><th scope="col">Lag</th><th scope="col">Partial r</th><th scope="col">p-value</th><th scope="col">Ground truth</th></tr></thead><tbody><tr class="bench-fp"><td><code>machine_temp_C</code></td><td><code>vibration_mm_s</code></td><td>0</td><td><span class="signed negative">-0.0785</span></td><td><code>0.01921</code></td><td><span class="bench-fp-mark">EXTRA</span></td></tr>
 <tr class="bench-fp"><td><code>production_load_pct</code></td><td><code>coolant_flow_lpm</code></td><td>0</td><td><span class="signed negative">-0.0688</span></td><td><code>0.04006</code></td><td><span class="bench-fp-mark">EXTRA</span></td></tr>
 <tr class=""><td><code>ambient_temp_C</code></td><td><code>ambient_temp_C</code></td><td>1</td><td><span class="signed positive">+0.5424</span></td><td><code>1.38e-69</code></td><td><span class="matched">MATCH</span></td></tr>
 <tr class=""><td><code>ambient_temp_C</code></td><td><code>machine_temp_C</code></td><td>1</td><td><span class="signed positive">+0.2454</span></td><td><code>1.06e-13</code></td><td><span class="matched">MATCH</span></td></tr>
@@ -90,13 +90,13 @@
 <div class="bench-diff"><b>Strict cross-variable scoring:</b> 9/9 planted cross-variable links recovered, plus 3 extra cross-variable links. Precision <b>75%</b>, recall <b>100%</b>, cross-variable F1 <b>85.7%</b>. The six correctly recovered autoregressive self-links are reported separately rather than hidden inside the headline.</div>
 </div></section>
 <section class="bench-block" id="limits"><div class="container">
-<div class="bench-heading"><div><p class="eyebrow">04 / WHAT NEITHER SYSTEM CLAIMED</p><h2>Scope of the experiment</h2></div><p>The benchmark intentionally withheld structural equations and intervention outcomes. Both conversations explicitly declined to compute do(flow = 110) vs do(flow = 100) or recommend an optimal flow.</p></div>
+<div class="bench-heading"><div><h2>Scope of the experiment</h2></div><p>The benchmark intentionally withheld structural equations and intervention outcomes. Both conversations explicitly declined to compute do(flow = 110) vs do(flow = 100) or recommend an optimal flow.</p></div>
 <div class="bench-grid"><div class="bench-panel"><h3>What this test demonstrates</h3><ul><li>Execution of a specialized algorithm in the mira-enabled configuration</li><li>Exact recovery of all planted temporal links in this single synthetic sample</li><li>Quantified false positives and transparent statistical provenance</li><li>Independent, useful exploratory analysis without the plugin</li></ul></div>
 <div class="bench-panel"><h3>What it does not establish</h3><ul><li>Production reliability or real-world causal validity</li><li>General accuracy on other datasets, seeds or settings</li><li>Causal effect identification or automatic SCM estimation</li><li>That other ChatGPT environments cannot run specialized scientific packages</li><li>That the public ChatGPT app has passed review</li></ul></div></div>
 <p class="bench-note">At α=0.05 no multiple-testing correction was applied. Two reported same-time links (p=0.01921 and 0.04006) and one lagged vibration→flow link (p=0.004863) do not match direct edges of the synthetic DGP. No backend internal CI-test history or full orientation trace was provided.</p>
 </div></section>
 <section class="bench-block" id="evidence"><div class="container">
-<div class="bench-heading"><div><p class="eyebrow">05 / REPRODUCIBILITY &amp; PROVENANCE</p><h2>Data and reproducibility</h2></div><p>The original CSV, exact prompts, the seeded generator, the synthetic truth and a structured transcription of the two user-shared reports are published together.</p></div>
+<div class="bench-heading"><div><h2>Data and reproducibility</h2></div><p>The original CSV, exact prompts, the seeded generator, the synthetic truth and a structured transcription of the two user-shared reports are published together.</p></div>
 <div class="bench-evidence-grid">
 <div class="evidence-card"><h3>mira private backend report</h3><ul><li>Private backend v0.4.0</li><li>formal time-series causal discovery; lags 0–2, α=0.05</li><li>260 conditional-independence test calls reported</li><li>16 lagged + 2 same-time, no unresolved links</li><li>No background knowledge or FDR adjustment</li><li>Status: <code>completed</code>, issues: none</li></ul>
 <p>Reported request SHA-256:</p><code class="evidence-hash">5cee9f3d91c4eefcce08578d992868bda1ee50710158e26b5318337fe932ca91</code>
@@ -105,19 +105,19 @@
 <p>Original CSV file SHA-256 (independently checked):</p><code class="evidence-hash">22eac3fc04f0577df3af126d5537c628018213e1dcfd35cef5f304b2aeb5d13a</code>
 <p>Private connector result summaries are user-transcribed evidence, not a fresh independent backend replay.</p></div></div>
 <div class="bench-downloads">
-<a href="benchmark-v2/mira_blind_cooling_v2_900.csv" download>Exact dataset (900 rows) ↗</a>
-<a href="benchmark-v2/prompt_with_mira.txt" download>Original mira prompt ↗</a>
-<a href="benchmark-v2/prompt_chatgpt_only.txt" download>Original ChatGPT-only prompt ↗</a>
-<a href="benchmark-v2/generate_dataset.py" download>Reproduce CSV with Python ↗</a>
-<a href="benchmark-v2/evidence.json" download>All 18 reported edges (.json) ↗</a>
-<a href="https://github.com/FTamas77/mira-causal-ai-site/blob/main/benchmark-v2/README.md">Methods, generating equations &amp; scoring ↗</a>
+<a href="benchmark-v2/mira_blind_cooling_v2_900.csv" download>Exact dataset (900 rows)</a>
+<a href="benchmark-v2/prompt_with_mira.txt" download>Original mira prompt</a>
+<a href="benchmark-v2/prompt_chatgpt_only.txt" download>Original ChatGPT-only prompt</a>
+<a href="benchmark-v2/generate_dataset.py" download>Reproduce CSV with Python</a>
+<a href="benchmark-v2/evidence.json" download>All 18 reported edges (.json)</a>
+<a href="https://github.com/FTamas77/mira-causal-ai-site/blob/main/benchmark-v2/README.md">Methods, generating equations &amp; scoring</a>
 </div>
 <p class="bench-note">Reported request/data hashes are from the user-shared mira transcript and were not reconstructed from full raw MCP request payloads. The raw downloadable CSV checksum was independently verified against the original uploaded file.</p>
 </div></section>
-<section class="bench-block" id="conclusion"><div class="container"><p class="eyebrow">06 / CONCLUSION</p>
+<section class="bench-block" id="conclusion"><div class="container"><h2>Conclusion</h2>
 <div class="bench-conclusion"><strong>The measurable benefit in this experiment:</strong> mira made formal temporal causal analysis available in ChatGPT and produced a structured statistical graph. Against a withheld synthetic DGP, it recovered all 15 planted links, with 3 false positives. <strong>The ChatGPT-only configuration still performed meaningful lagged-correlation analysis</strong>, but had no installed specialized discovery implementation. Neither configuration identified intervention effects. This is a useful one-run research result, not a proof of general product superiority.</div>
 <p class="bench-note">Pre-release, private mira v0.4.0, 19 November 2026. A multi-seed evaluation using the released public app should follow app approval.</p>
-<div class="page-cta"><div><h2>Research feedback</h2><p>The reproducibility materials are public, and research collaboration is welcome.</p></div><a class="btn btn-primary" href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open an issue <span aria-hidden="true">↗</span></a></div>
+<div class="page-cta"><div><h2>Research feedback</h2><p>The reproducibility materials are public, and research collaboration is welcome.</p></div><a class="btn btn-primary" href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open an issue</a></div>
 </div></section>
 </main><footer class="site-footer">
   <div class="container footer-main">
