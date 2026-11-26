@@ -38,25 +38,29 @@
     <div class="hero-copy">
       <h1>Bringing causal intelligence to generative AI</h1>
       <p class="hero-lead">mira combines generative AI with formal causal methods to investigate complex systems and evaluate interventions.</p>
-      <p class="hero-context">A research prototype integrating scientific causal computation with ChatGPT. Explore how data, domain knowledge and explicit models can inform a decision.</p>
+      <p class="hero-context">A research prototype integrating scientific causal computation with ChatGPT. The scientific backend is independent of the language model.</p>
       <div class="button-row"><a class="btn btn-primary" href="demo.html#what-if">Explore the example</a><a class="btn btn-ghost" href="#research">How it works</a></div>
     </div>
     <div class="hero-simulation" aria-label="Illustrative industrial cooling what-if comparison">
       <div class="sim-preview-head"><span>Industrial cooling · synthetic example</span></div>
       <h2>Choosing a cooling setting</h2>
       <p>Minimize modeled energy while keeping machine temperature at or below 72°C.</p>
-      <div class="sim-preview-labels"><span>Cooling flow</span><span>Modeled temperature</span><span>Result</span></div>
-      <div class="sim-preview-row"><span><b>35</b> L/min</span><span>74.35°C</span><span class="sim-status bad">Too hot</span></div>
-      <div class="sim-preview-row selected"><span><b>50</b> L/min</span><span>71.35°C</span><span class="sim-status good">Selected</span></div>
-      <div class="sim-preview-row"><span><b>65</b> L/min</span><span>68.35°C</span><span class="sim-status soft">Feasible</span></div>
-      <div class="sim-preview-bottom"><span>Conditional on the specified model</span><a href="demo.html#what-if">Change the inputs ↗</a></div>
+      <table class="cooling-comparison" aria-label="Modeled outcomes of three cooling settings">
+        <thead><tr><th scope="col">Flow<br><small>L/min</small></th><th scope="col">Temp.<br><small>°C</small></th><th scope="col">Energy<br><small>kWh</small></th><th scope="col">Feasibility</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">35</th><td>74.35</td><td>160.75</td><td class="outcome-infeasible">Above limit</td></tr>
+          <tr class="chosen"><th scope="row">50</th><td>71.35</td><td>167.50</td><td class="outcome-selected">Selected</td></tr>
+          <tr><th scope="row">65</th><td>68.35</td><td>174.25</td><td>Feasible</td></tr>
+        </tbody>
+      </table>
+      <div class="sim-preview-bottom"><span>Conditional on the specified model</span><a href="demo.html#what-if">Change the inputs</a></div>
     </div>
   </div>
 </section>
 <section class="section-block product-approach" id="research">
   <div class="container">
     <div class="section-heading"><div><h2>The approach</h2></div><p class="section-aside">The AI agent gathers and interprets information. A separate scientific backend performs causal computations under explicit assumptions.</p></div>
-    <div class="method-grid">
+    <div class="method-grid" aria-label="Causal investigation workflow">
       <article><span class="method-number">01</span><h3>Investigate</h3><p>Explore candidate causal relationships in data and incorporate domain knowledge.</p></article>
       <article><span class="method-number">02</span><h3>Model and evaluate</h3><p>Specify a causal model and calculate the effects of candidate interventions conditional on that model.</p></article>
       <article><span class="method-number">03</span><h3>Compare decisions</h3><p>Evaluate modeled outcomes against objectives and constraints. Make assumptions and calculations available for review.</p></article>
@@ -83,7 +87,6 @@
 <section class="section-block founder-section" id="expertise">
   <div class="container founder-layout">
     <div>
-      
       <h2>Research and engineering</h2>
       <p class="section-lead">The project builds on research in causal AI and experience in industrial software engineering.</p>
     </div>
@@ -93,7 +96,7 @@
         <div><span class="small-caps">Researcher and software engineer</span><h3>Dr. Tamas Fekete</h3></div>
       </div>
       <p>PhD in Information Systems and Management and postdoctoral research at Constructor University Bremen. Member of the Data-Driven Industrial Systems (DIS) Research Group. Senior Software Engineer at evosoft Hungary (Siemens), with approximately 15 years of industrial software engineering experience.</p>
-      <p>Research in causal AI, explainable AI and industrial decision support, including three peer-reviewed Q1 journal publications with Prof. Hendro Wicaksono and other academic collaborators.</p>
+      <p>Research in causal AI, explainable AI and industrial decision support. Three peer-reviewed Q1 journal publications with Prof. Hendro Wicaksono and other academic collaborators.</p>
     </div>
   </div>
 </section>
@@ -132,7 +135,7 @@
 </div>
 </section>
 <section class="section-block last-section product-contact">
-  <div class="container closing-grid"><div><h2>Collaboration</h2><p>We welcome research collaborations, feasibility studies and joint industrial proof-of-concept projects in causal AI.</p></div><a class="btn btn-ghost" href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Get in touch</a></div>
+  <div class="container closing-grid"><div><h2>Collaboration</h2><p>We welcome research collaborations, feasibility studies and joint industrial proof-of-concept projects in causal AI.</p></div><a class="btn btn-ghost" href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Contact</a></div>
 </section>
 </main>
   <footer class="site-footer">
