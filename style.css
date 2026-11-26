@@ -94,7 +94,7 @@ code{font-family:ui-monospace,Consolas,monospace;font-size:.9em;overflow-wrap:an
 #research .section-heading,#example .section-heading{display:block;margin-bottom:26px}
 #research .section-heading h2,#example .section-heading h2{margin-bottom:9px}
 #research .section-aside,#example .section-aside{max-width:720px}
-.research-example-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid var(--line)}
+.research-example-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
 .method-grid article{min-width:0;padding:5px 24px 5px 26px;border-left:1px solid var(--line)}
 .method-grid article:first-child{padding-left:0;border-left:0}
 .method-grid article:last-child{padding-right:0}
@@ -105,7 +105,7 @@ code{font-family:ui-monospace,Consolas,monospace;font-size:.9em;overflow-wrap:an
 .research-example-grid h3{font-size:19px;margin:0;line-height:1.35}
 .method-grid p,.research-example-grid p,.research-direction-layout p{color:var(--muted);font-size:15px;margin-bottom:12px}
 .home-example,#research-directions,.case-feature,.simulator-section{background:var(--soft)}
-.research-example-grid article{min-width:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr) minmax(0,.8fr);gap:24px;align-items:baseline;padding:19px 0;border-bottom:1px solid var(--line)}
+.research-example-grid article{min-width:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr) minmax(0,.8fr);gap:24px;align-items:baseline;padding:16px 0}
 .research-example-grid article p{margin:0}
 .research-example-grid a{font-weight:650;font-size:14px;justify-self:end;text-align:right}
 .research-example-grid a::after{content:" →";font-weight:400;white-space:nowrap}
