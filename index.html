@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Bringing causal intelligence to generative AI through scientific causal discovery, formal causal computation and transparent decision support.">
-  <meta name="theme-color" content="#08131c">
+  <meta name="theme-color" content="#f8faf9">
   <title>mira Causal AI | Bringing causal intelligence to generative AI</title>
   <link rel="canonical" href="https://ftamas77.github.io/mira-causal-ai-site/">
   <meta property="og:type" content="website">
@@ -22,118 +22,90 @@
     <div class="container header-inner">
       <a class="brand" href="./" aria-label="mira Causal AI homepage"><span class="brand-symbol" aria-hidden="true">m<span>.</span></span><span class="brand-name">mira <small>CAUSAL AI</small></span></a>
       <nav class="primary-nav" aria-label="Main navigation">
-  <a href="./#research">Capabilities</a>
-  <a href="demo.html#what-if">What-if demo</a>
+  <a href="./#research">Approach</a>
+  <a href="demo.html#what-if">Example</a>
   <a href="benchmark.html">Benchmark</a>
   <a href="./#publications">Publications</a>
-  <a href="./#expertise">Expertise</a>
-  <a href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open an issue</a>
+  <a href="./#research-directions">Research directions</a>
+  <a href="./#expertise">Research team</a>
+  <a href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Contact</a>
 </nav>
     </div>
   </header>
   <main id="main">
 <section class="hero-section product-hero">
-  <div class="hero-glow" aria-hidden="true"></div>
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="eyebrow-line"></span> MIRA CAUSAL AI <span class="eyebrow-separator">/</span> RESEARCH &amp; ENGINEERING</p>
-      <h1>Bringing causal intelligence<br><em>to generative AI.</em></h1>
-      <p class="hero-lead">mira explores how generative AI can work with formal causal methods to investigate complex systems and evaluate interventions. The ChatGPT integration is an initial research demonstrator of a broader, LLM-independent approach.</p>
-      <div class="button-row"><a class="btn btn-primary" href="demo.html#what-if">Try a what-if simulation <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="#research">Explore the approach <span aria-hidden="true">↓</span></a></div>
-      <div class="hero-meta"><span class="status-dot" aria-hidden="true"></span> Research prototype <span class="meta-separator">·</span> Working scientific demonstrations</div>
+      <h1>Bringing causal intelligence to generative AI</h1>
+      <p class="hero-lead">mira combines generative AI with formal causal methods to investigate complex systems and evaluate interventions.</p>
+      <p class="hero-context">A research prototype integrating scientific causal computation with ChatGPT. Explore how data, domain knowledge and explicit models can inform a decision.</p>
+      <div class="button-row"><a class="btn btn-primary" href="demo.html#what-if">Explore the example</a><a class="btn btn-ghost" href="#research">How it works</a></div>
     </div>
     <div class="hero-simulation" aria-label="Illustrative industrial cooling what-if comparison">
-      <div class="sim-preview-head"><span>WHAT-IF / INDUSTRIAL COOLING</span><span class="sim-preview-dot" aria-hidden="true"></span></div>
-      <h2>Which setting should we choose?</h2>
+      <div class="sim-preview-head"><span>Industrial cooling · synthetic example</span></div>
+      <h2>Choosing a cooling setting</h2>
       <p>Minimize modeled energy while keeping machine temperature at or below 72°C.</p>
       <div class="sim-preview-labels"><span>Cooling flow</span><span>Modeled temperature</span><span>Result</span></div>
       <div class="sim-preview-row"><span><b>35</b> L/min</span><span>74.35°C</span><span class="sim-status bad">Too hot</span></div>
       <div class="sim-preview-row selected"><span><b>50</b> L/min</span><span>71.35°C</span><span class="sim-status good">Selected</span></div>
       <div class="sim-preview-row"><span><b>65</b> L/min</span><span>68.35°C</span><span class="sim-status soft">Feasible</span></div>
-      <div class="sim-preview-bottom"><span>Example values from an explicit synthetic model</span><a href="demo.html#what-if">Change the inputs ↗</a></div>
+      <div class="sim-preview-bottom"><span>Conditional on the specified model</span><a href="demo.html#what-if">Change the inputs ↗</a></div>
     </div>
   </div>
 </section>
 <section class="section-block product-approach" id="research">
   <div class="container">
-    <div class="section-heading">
-      <div><p class="eyebrow">CAPABILITIES</p><h2>From understanding<br><span class="accent">to action.</span></h2></div>
-      <p class="section-aside">Generative AI helps gather and interpret evidence. mira complements it with formal causal methods to explore relationships, evaluate interventions and compare decisions under explicit assumptions.</p>
-    </div>
-    <div class="product-grid">
-      <article class="product-card"><span>01 / ANALYZE</span><h3>Understand causes</h3><p>Explore relationships and causal effects using scientific methods, supported by domain expertise.</p></article>
-      <article class="product-card focus"><span>02 / SIMULATE</span><h3>Ask “what if?”</h3><p>Use explicit causal models to explore interventions, scenarios and counterfactual questions.</p></article>
-      <article class="product-card"><span>03 / DECIDE</span><h3>Compare options</h3><p>Weigh outcomes against objectives and constraints, with calculations you can inspect.</p></article>
-      <article class="product-card"><span>04 / LEARN</span><h3>Build knowledge</h3><p>Connect expert assumptions, evidence and reusable causal understanding across investigations.</p></article>
+    <div class="section-heading"><div><h2>The approach</h2></div><p class="section-aside">The AI agent gathers and interprets information. A separate scientific backend performs causal computations under explicit assumptions.</p></div>
+    <div class="method-grid">
+      <article><span class="method-number">01</span><h3>Investigate</h3><p>Explore candidate causal relationships in data and incorporate domain knowledge.</p></article>
+      <article><span class="method-number">02</span><h3>Model and evaluate</h3><p>Specify a causal model and calculate the effects of candidate interventions conditional on that model.</p></article>
+      <article><span class="method-number">03</span><h3>Compare decisions</h3><p>Evaluate modeled outcomes against objectives and constraints. Make assumptions and calculations available for review.</p></article>
     </div>
   </div>
 </section>
 <section class="section-block home-example" id="example">
-  <div class="container home-example-grid">
-    <div>
-      <p class="eyebrow">SEE MIRA IN ACTION</p>
-      <h2>Analyze. Simulate.<br><span class="accent">Decide.</span></h2>
-      <p class="section-lead">An industrial cooling example with 600 observations, 15 reported temporal relationships and three evaluated actions.</p>
-      <div class="button-row"><a class="btn btn-primary" href="demo.html">Explore the example <span aria-hidden="true">↗</span></a></div>
+  <div class="container">
+    <div class="section-heading"><div><h2>Research examples</h2></div><p class="section-aside">Synthetic experiments illustrating different aspects of the approach.</p></div>
+    <div class="research-example-grid">
+      <article><h3>Industrial cooling</h3><p>600 synthetic observations, 15 reported temporal relationships and three modeled interventions.</p><a href="demo.html">Explore the case study</a></article>
+      <article id="comparison"><h3>Causal discovery benchmark</h3><p>900 synthetic observations: 15 of 15 planted temporal links recovered, with three additional links.</p><a href="benchmark.html">Methods and results</a></article>
+      <article id="development-preview"><h3>Persistent investigations</h3><p>Authenticated development experiment retaining revisioned evidence across three independent ChatGPT conversations.</p><a href="investigations.html">Development experiment</a></article>
     </div>
-    <a class="home-example-preview" href="demo.html" aria-label="Open the industrial cooling use case"><img src="images/cooling-chart.svg" width="960" height="585" alt="Energy comparison for three cooling settings, highlighting the feasible selection" loading="lazy" decoding="async"></a>
-  </div>
-</section>
-<section class="section-block home-benchmark" id="comparison">
-  <div class="container benchmark-teaser">
-    <div><p class="eyebrow">REPRODUCIBLE RESEARCH</p><h2>Measured results.<br><span class="accent">Open evidence.</span></h2>
-      <p class="section-lead">In a separate blind synthetic test, mira recovered all 15 planted temporal links, with three additional links. See the data, prompts and scoring.</p>
-      <a class="btn btn-ghost" href="benchmark.html">View the benchmark <span aria-hidden="true">↗</span></a>
-    </div>
-    <div class="benchmark-teaser-stats"><strong>15<span>/15</span></strong><span>Planted links recovered</span><p>3 extra links · 900 synthetic observations</p></div>
-  </div>
-</section>
-<section class="section-block home-benchmark" id="development-preview">
-  <div class="container benchmark-teaser">
-    <div><p class="eyebrow">DEVELOPMENT PREVIEW / v0.5.0-dev</p><h2>One investigation.<br><span class="accent">Multiple conversations.</span></h2>
-      <p class="section-lead">A live synthetic logistics demonstration of authenticated, persistent investigation state, with revisioned evidence and provenance retained across three independent ChatGPT conversations.</p>
-      <a class="btn btn-ghost" href="investigations.html">Explore the development preview <span aria-hidden="true">↗</span></a>
-      <p class="small-note">Separate research preview, not part of the submitted v0.4.0 release.</p>
-    </div>
-    <div class="benchmark-teaser-stats"><strong>4<span>/4</span></strong><span>Functional checks completed</span><p>3 conversations · 2 retained evidence entries</p></div>
   </div>
 </section>
 <section class="section-block" id="research-directions">
-  <div class="container">
-    <div class="section-heading">
-      <div><h2>Research directions</h2></div>
-      <p class="section-aside">How should an AI-assisted investigation handle uncertainty in causal assumptions and models?</p>
-    </div>
-    <p class="section-lead">The current prototype makes model assumptions explicit and evaluates interventions conditional on a specified model. We are exploring how to represent alternative causal structures, quantify parameter uncertainty, examine sensitivity to assumptions and assess whether intervention decisions remain robust across plausible models.</p>
-    <p>These are ongoing research questions, not validated capabilities of the current prototype. The longer-term aim is a causal investigation and computation architecture independent of any particular AI interface. ChatGPT provides an initial experimental interface; other research and industrial integrations are possible directions.</p>
+  <div class="container research-direction-layout">
+    <h2>Causal uncertainty</h2>
+    <div><p>Intervention estimates depend on the causal structure, model parameters and assumptions. The current prototype evaluates interventions conditional on a specified model.</p>
+    <p>Our research explores how to represent alternative causal structures, quantify parameter uncertainty, examine sensitivity to assumptions and assess whether decisions remain robust across plausible models. These are open research directions.</p></div>
   </div>
 </section>
 <section class="section-block founder-section" id="expertise">
   <div class="container founder-layout">
     <div>
-      <p class="eyebrow">RESEARCH &amp; ENGINEERING</p>
-      <h2>Research depth.<br><span class="accent">Engineering experience.</span></h2>
-      <p class="section-lead">Built on doctoral and postdoctoral research and hands-on industrial software engineering.</p>
+      
+      <h2>Research and engineering</h2>
+      <p class="section-lead">The project builds on research in causal AI and experience in industrial software engineering.</p>
     </div>
     <div class="founder-profile">
       <div class="founder-profile-head">
         <div class="founder-monogram" aria-hidden="true">TF</div>
-        <div><span class="small-caps">RESEARCHER &amp; SOFTWARE ENGINEER</span><h3>Dr. Tamas Fekete</h3></div>
+        <div><span class="small-caps">Researcher and software engineer</span><h3>Dr. Tamas Fekete</h3></div>
       </div>
       <p>PhD in Information Systems and Management and postdoctoral research at Constructor University Bremen. Member of the Data-Driven Industrial Systems (DIS) Research Group. Senior Software Engineer at evosoft Hungary (Siemens), with approximately 15 years of industrial software engineering experience.</p>
-      <p>Research in causal AI, explainable AI and industrial decision support, supported by three peer-reviewed Q1 journal publications.</p>
+      <p>Research in causal AI, explainable AI and industrial decision support, including three peer-reviewed Q1 journal publications with Prof. Hendro Wicaksono and other academic collaborators.</p>
     </div>
   </div>
 </section>
 <section class="section-block publications-band" id="publications" aria-labelledby="publications-title">
   <div class="container">
     <div class="section-heading">
-      <div><p class="eyebrow">04 / SELECTED PUBLICATIONS</p><h2 id="publications-title">Three Q1 papers.<br><span class="accent">Verifiable research.</span></h2></div>
+      <div><h2 id="publications-title">Selected publications</h2></div>
       <p class="section-aside">Research in manufacturing, transportation and sustainable mobility.</p>
     </div>
     <div class="publications-grid">
       <article class="publication-card">
-        <div class="publication-meta"><span class="publication-tier">Q1 JOURNAL</span><span>2026 · Manufacturing</span></div>
+        <div class="publication-meta"><span class="publication-tier">Q1 journal</span><span>2026 · Manufacturing</span></div>
         <h3>A comprehensive causal AI framework for analysing factors affecting energy consumption and costs in customised manufacturing</h3>
         <p class="publication-authors">Tamas Fekete · Isabella Marquez Petrone · Hendro Wicaksono</p>
         <p class="publication-journal"><cite>International Journal of Production Research</cite>, 64(7), 2531–2568</p>
@@ -141,7 +113,7 @@
         <a class="publication-link" href="https://doi.org/10.1080/00207543.2025.2580541" target="_blank" rel="noopener noreferrer">Publisher / DOI <span aria-hidden="true">↗</span></a>
       </article>
       <article class="publication-card">
-        <div class="publication-meta"><span class="publication-tier">Q1 JOURNAL</span><span>2026 · Transportation</span></div>
+        <div class="publication-meta"><span class="publication-tier">Q1 journal</span><span>2026 · Transportation</span></div>
         <h3>Ontology-guided causal discovery and inference for reducing CO₂ emissions in transportation</h3>
         <p class="publication-authors">Tamas Fekete · Hendro Wicaksono</p>
         <p class="publication-journal"><cite>International Journal of Sustainable Transportation</cite>, 20(5), 458–478</p>
@@ -149,7 +121,7 @@
         <a class="publication-link" href="https://doi.org/10.1080/15568318.2025.2588608" target="_blank" rel="noopener noreferrer">Publisher / DOI <span aria-hidden="true">↗</span></a>
       </article>
       <article class="publication-card">
-        <div class="publication-meta"><span class="publication-tier">Q1 JOURNAL</span><span>2025 · Urban mobility</span></div>
+        <div class="publication-meta"><span class="publication-tier">Q1 journal</span><span>2025 · Urban mobility</span></div>
         <h3>Leveraging causal AI to uncover the dynamics in sustainable urban transport: A bike sharing time-series study</h3>
         <p class="publication-authors">Tamas Fekete · Girum Mengistu · Hendro Wicaksono</p>
         <p class="publication-journal"><cite>Sustainable Cities and Society</cite>, 122, 106240</p>
@@ -159,15 +131,14 @@
     </div>
 </div>
 </section>
-
 <section class="section-block last-section product-contact">
-  <div class="container closing-grid"><div><p class="eyebrow">INDUSTRIAL COLLABORATION</p><h2>From causal research<br><span class="accent">to industrial practice.</span></h2><p>We welcome funded research collaborations, causal AI consulting, feasibility studies and joint proof-of-concept development. Our focus is on integrating scientific causal methods into real-world generative AI applications and industrial decision-support systems.</p></div><a class="btn btn-primary" href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Open a GitHub issue <span aria-hidden="true">↗</span></a></div>
+  <div class="container closing-grid"><div><h2>Collaboration</h2><p>We welcome research collaborations, feasibility studies and joint industrial proof-of-concept projects in causal AI.</p></div><a class="btn btn-ghost" href="https://github.com/FTamas77/mira-causal-ai-site/issues/new">Get in touch</a></div>
 </section>
 </main>
   <footer class="site-footer">
   <div class="container footer-main">
     <div><a class="footer-brand" href="./">mira<span>.</span> <small>CAUSAL AI</small></a><p>Bringing causal intelligence to generative AI.</p></div>
-    <div class="footer-links"><span class="footer-label">Explore</span><a href="./#research">Capabilities</a><a href="demo.html#what-if">What-if demo</a><a href="benchmark.html">Benchmark</a><a href="./#publications">Publications</a><a href="./#expertise">Expertise</a></div>
+    <div class="footer-links"><span class="footer-label">Explore</span><a href="./#research">Approach</a><a href="demo.html#what-if">Example</a><a href="benchmark.html">Benchmark</a><a href="./#publications">Publications</a><a href="./#research-directions">Research directions</a><a href="./#expertise">Research team</a></div>
     <div class="footer-links"><span class="footer-label">Information</span><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
   </div>
   <div class="container footer-bottom"><span>mira Causal AI</span><span>Research &amp; Engineering</span></div>
