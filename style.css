@@ -560,3 +560,66 @@ h1,h2,h3 { letter-spacing:-.025em; }
   .homepage .sim-preview-row,.homepage .sim-preview-labels { padding-left:5px; padding-right:5px; gap:4px; }
   .homepage .sim-status { padding:3px 4px; white-space:normal; }
 }
+
+
+/* Shared navigation, evidence table and original causal-path motif. */
+.header-inner { gap:20px; }
+.primary-nav { min-width:0; justify-content:flex-end; gap:10px 18px; }
+.primary-nav a { line-height:1.35; padding:7px 0; }
+.site-header a:focus-visible,.site-footer a:focus-visible { outline-color:#276e61; }
+.site-footer a:hover { color:#184e45; }
+.homepage .hero-copy,.homepage .hero-simulation { min-width:0; }
+.homepage .hero-simulation { border-top:3px solid #276e61; border-radius:5px; }
+.homepage .sim-preview-bottom { flex-wrap:wrap; gap:8px 14px; }
+.homepage .sim-preview-bottom a { white-space:normal; }
+.cooling-comparison { width:100%; border-collapse:collapse; table-layout:fixed; font-size:13px; font-variant-numeric:tabular-nums; }
+.cooling-comparison th,.cooling-comparison td { padding:11px 5px; border-bottom:1px solid #d6dfdc; vertical-align:middle; text-align:right; overflow-wrap:anywhere; }
+.cooling-comparison thead th { color:#4e6269; font-weight:600; font-size:12px; text-align:right; line-height:1.3; }
+.cooling-comparison thead small { font-weight:400; }
+.cooling-comparison tr>*:first-child { text-align:left; width:18%; }
+.cooling-comparison tr>*:last-child { text-align:left; padding-left:10px; width:29%; }
+.cooling-comparison tbody th { font-size:15px; font-weight:650; }
+.cooling-comparison tbody tr.chosen { background:#e8f2eb; }
+.cooling-comparison .outcome-infeasible { color:#8d3f36; }
+.cooling-comparison .outcome-selected { color:#165740; font-weight:700; }
+.homepage .method-grid { gap:24px; }
+.method-grid article { position:relative; border-top:0; padding-top:20px; }
+.method-grid article::before { content:""; position:absolute; top:6px; left:7px; right:-31px; height:1px; background:#a6bdb3; }
+.method-grid article:last-child::before { right:0; }
+.method-number { position:relative; display:inline-flex; align-items:center; gap:7px; }
+.method-number::before { content:""; position:absolute; width:10px; height:10px; top:-19px; left:1px; background:#f8faf9; border:2px solid #276e61; border-radius:50%; }
+.homepage .publication-link { display:inline-block; }
+.subpage .bench-hero { background:#10232c; padding:64px 0; }
+.subpage .bench-hero h1 { font-size:clamp(36px,4.4vw,58px); font-weight:650; }
+.subpage .bench-block { padding:64px 0; }
+.subpage .bench-heading h2 { font-size:clamp(27px,3.2vw,40px); font-weight:650; }
+.subpage .hero-proof,.subpage .case-result,.subpage .case-visual img,.subpage .case-lead-art img,.subpage .case-trace img { box-shadow:none; }
+.subpage .simulator-section { background:#0d202a; }
+.subpage .bench-hero .hero-proof { min-width:0; }
+.subpage .bench-hero-inner>* { min-width:0; }
+.subpage .case-result-line { flex-wrap:wrap; }
+.subpage .simulator-readout-grid strong { white-space:normal; overflow-wrap:anywhere; }
+.subpage .proof-mini>div { min-width:0; overflow-wrap:anywhere; }
+@media(max-width:980px) {
+  html { scroll-padding-top:18px; }
+  .site-header { position:relative; top:auto; }
+  .header-inner { align-items:flex-start; flex-direction:column; min-height:0; padding:14px 0; gap:9px; }
+  .primary-nav { width:100%; justify-content:flex-start; gap:4px 16px; }
+  .legal-aside { position:static; }
+}
+@media(max-width:760px) {
+  .method-grid article::before { right:0; }
+  .homepage .method-grid { gap:10px; }
+  .homepage .method-grid article { padding-top:18px; }
+  .subpage .bench-hero,.subpage .bench-block { padding:42px 0; }
+  .subpage .bench-heading { margin-bottom:24px; }
+}
+@media(max-width:400px) {
+  .homepage .hero-simulation { padding:13px; }
+  .cooling-comparison { font-size:12px; }
+  .cooling-comparison th,.cooling-comparison td { padding:9px 3px; }
+  .cooling-comparison tr>*:last-child { padding-left:5px; }
+  .subpage .proof-mini { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .subpage .proof-mini b { font-size:17px; }
+  .subpage .proof-mini span { font-size:10px; }
+}
